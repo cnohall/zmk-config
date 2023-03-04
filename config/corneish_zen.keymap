@@ -33,7 +33,7 @@
 //                     | GUI | LWR | SPC |   | SPC |RS-ENT| ALT |
                         bindings = <
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I   &kp O   &kp P    &kp BSPC
-   CTRL_ESC  &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K   &kp L   SE_ODIS  SE_ADIA
+   CTRL_ESC  &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K   &kp L   SE_ODIA  SE_ADIA
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  SE_COMM SE_DOT  SE_MINS  &kp ESC
                  &kp LGUI BS_LOW &kp SPACE   &kp SPACE ENT_RS &kp RALT
                         >;
