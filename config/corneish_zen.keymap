@@ -12,9 +12,27 @@
 #include "combos.h"
 #include "keymap_swedish.h"
 
+// LAYERS
+#define QWERTY 0
+#define NUM 1
+#define SYM 2
+#define NAV 3
+#define FUNC 4
+#define NUMPAD 5
+#define ADJUST 6
+
+// CUSTOM KEY CODES
 #define CTRL_ESC &mt LCTRL ESC
-#define ENT_RS &lt 2 ENTER
-#define BS_LOW &lt 1 BSPC
+#define BS_LOW &lt NUM BSPC
+#define ENT_RS &lt SYM ENTER
+#define SPCNAV &lt NAV SPACE
+
+#define C_PGUP &kp LC(PG_UP)
+#define C_PGDN &kp LC(PG_DN)
+#define COMNT  &kp LC(SE_QUOT)
+#define DUPLIC &kp LC(LS(D))
+#define YANK   &kp LC(INS)
+#define PASTE  &kp LS(INS)
 
 / {
   chosen {
@@ -37,9 +55,10 @@
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I   &kp O   &kp P    SE_ARNG
    CTRL_ESC  &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K   &kp L   SE_ODIA  SE_ADIA
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  SE_COMM SE_DOT  SE_MINS  &kp ESC
-                 &kp LGUI BS_LOW &kp SPACE   &kp SPACE ENT_RS &kp RALT
+                 &kp LGUI BS_LOW &kp SPACE   SPCNAV ENT_RS &kp RALT
                         >;
                 };
+
                 lower_layer {
                         label = "NUMBER";
 // -----------------------------------------------------------------------------------------
@@ -51,7 +70,7 @@
    &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
    &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                          	        &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
+                              	        &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
                         >;
                 };
 
@@ -66,8 +85,24 @@
    &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
    CTRL_ESC  &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
    &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                    	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+                      	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
                 };
+
+                nav_layer {
+                        label = "NAV";
+// -----------------------------------------------------------------------------------------
+// |       |     | Gui |  Alt|     | PgUp|   | Yank|CPgUp|     |CPgDn|Paste|      |
+// | Bspc  | Home| End | Ctrl|Shift| PgDn|   |   ← |   ↓ |   ↑ |   → | Del |      |
+// |       |     |     |Comnt| Dupl|     |   |     | Yank|Paste|     |     |      |
+//                     |     |     |     |   |     |     |     |
+                        bindings = <
+   &none    &none    &kp LGUI &dp LALT  &none     &kp PG_UP    YANK     C_PGUP    &none   C_PGDN     PASTE   &none
+   &kp BSPC &kp HOME &kp END  &kp LCTRL &kp LSHFT &kp PG_DN    &kp LEFT &kp DOWN  &kp UP  &kp RIGHT  &kp DEL &none
+   &none    &none    &none    COMNT     DUPLIC    &none        &none    YANK      PASTE   &none      &none   &kp PSCRN
+                              &none     &none     &none        &none    &none     &none
+                        >;
+                };
+
         };
 };
