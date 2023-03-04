@@ -97,7 +97,7 @@
 // |       |     |     |Comnt| Dupl|     |   |     | Yank|Paste|     |     |      |
 //                     |     |     |     |   |     |     |     |
                         bindings = <
-   &none    &none    &kp LGUI &dp LALT  &none     &kp PG_UP    YANK     C_PGUP    &none   C_PGDN     PASTE   &none
+   &none    &none    &kp LGUI &kp LALT  &none     &kp PG_UP    YANK     C_PGUP    &none   C_PGDN     PASTE   &none
    &kp BSPC &kp HOME &kp END  &kp LCTRL &kp LSHFT &kp PG_DN    &kp LEFT &kp DOWN  &kp UP  &kp RIGHT  &kp DEL &none
    &none    &none    &none    COMNT     DUPLIC    &none        &none    YANK      PASTE   &none      &none   &kp PSCRN
                               &none     &none     &none        &none    &none     &none
