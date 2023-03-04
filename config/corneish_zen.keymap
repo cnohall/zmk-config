@@ -29,7 +29,7 @@
 
 #define C_PGUP &kp LC(PG_UP)
 #define C_PGDN &kp LC(PG_DN)
-#define COMNT  &kp LC(SE_QUOT)
+#define COMNT  &kp LC(NUHS)
 #define DUPLIC &kp LC(LS(D))
 #define YANK   &kp LC(INS)
 #define PASTE  &kp LS(INS)
