@@ -11,6 +11,7 @@
 
 #include "combos.h"
 #include "keymap_swedish.h"
+#include "homerow.h"
 
 // LAYERS
 #define QWERTY 0
@@ -35,6 +36,16 @@
 #define DUPLIC &kp LC(LS(D))
 #define YANK   &kp LC(INS)
 #define PASTE  &kp LS(INS)
+
+//homerow
+#define HM_A &hm_aodia LGUI A
+#define HM_S &hm_sl LALT S
+#define HM_D &hm_dk LCTRL D
+#define HM_F &hm_fj LSHFT F
+#define HM_ODIA &hm_aodia LGUI SE_ODIA
+#define HM_L &hm_sl LALT L
+#define HM_K &hm_dk LCTRL K
+#define HM_J &hm_fj LSHFT J
 
 / {
   chosen {
@@ -65,7 +76,7 @@
 //                     | GUI | LWR | TAB |   | SPC |RS-ENT| ALT |
                         bindings = <
    TABFNC    &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I       &kp O       &kp P       &kp SE_ARNG
-   C_ESC     &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K       &kp L       &kp SE_ODIA &kp SE_ADIA
+   C_ESC     HM_A  HM_S  HM_D  HM_F  &kp G   &kp H HM_J   HM_K        HM_L        HM_ODIA     &kp SE_ADIA
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp SE_COMM &kp SE_DOT  &kp SE_MINS &kp ESC
                    &kp LGUI  BS_LOW TABNUM   SPCNAV ENT_RS &kp RALT
                         >;
