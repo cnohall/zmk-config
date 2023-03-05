@@ -81,7 +81,7 @@
                         bindings = <
    &kp SE_AT  &kp SE_EXLM  &kp SE_DQUO  &kp SE_HASH  &kp SE_DLR  &kp SE_PERC    &kp SE_AMPR  &kp SE_SLSH  &kp SE_LPRN  &kp SE_RPRN  &kp SE_EQL  &kp SE_BSLS
    &kp SE_AT  &kp SE_EXLM  &kp SE_DQUO  &kp SE_HASH  &kp SE_DLR  &kp SE_PERC    &kp SE_AT    &kp SE_QUES  &kp SE_LBRC  &kp SE_RBRC  &kp SE_DLR  &kp SE_ASTR
-   &KP LSHFT  &none        &kp SE_PND   &kp SE_EURO  &kp SE_AT   &kp SE_CURR    &none        &kp SE_ASTR  &kp SE_LCBR  &kp SE_RCBR  &none       &none
+   &kp LSHFT  &none        &kp SE_PND   &kp SE_EURO  &kp SE_AT   &kp SE_CURR    &none        &kp SE_ASTR  &kp SE_LCBR  &kp SE_RCBR  &none       &none
                            &none        &none        &none       &none          &none        &none
                         >;
                 };
