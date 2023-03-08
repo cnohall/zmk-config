@@ -29,7 +29,7 @@
         combo_col {
             timeout-ms = <50>;
             key-positions = <32 33>;
-            bindings = <&kp SE_DOT>;
+            bindings = <&kp DOT>;
         };
 
     };
