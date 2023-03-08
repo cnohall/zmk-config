@@ -36,6 +36,7 @@
 #define DUPLIC &kp LC(LS(D))
 #define YANK   &kp LC(INS)
 #define PASTE  &kp LS(INS)
+#define CUT  &kp LC(X)
 
 //homerow
 #define HM_A &hm_aodia LGUI A
@@ -85,30 +86,30 @@
                 lower_layer {
                         label = "LOWER";
 // -----------------------------------------------------------------------------------------
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    |     |     |     |   |     |     |     |
+// |   @  |  !  |  "  |  #  |  $  |  %  |   |  &  |  /  |  (  |  )  |  =  |   \  |
+// |   @  |  !  |  "  |  #  |  $  |  %  |   |  @  |  ?  |  [  |  ]  |  $  |   *  |
+// | SHFT |     |  £  |  £  |  @  |  ¤  |   |     |  *  |  {  |  }  |     |      |
+//                    |     |     |     |   |CPSWD|     |     |
                         bindings = <
    &kp SE_AT  &kp SE_EXLM  &kp SE_DQUO  &kp SE_HASH  &kp SE_DLR  &kp SE_PERC    &kp SE_AMPR  &kp SE_SLSH  &kp SE_LPRN  &kp SE_RPRN  &kp SE_EQL  &kp SE_BSLS
    &kp SE_AT  &kp SE_EXLM  &kp SE_DQUO  &kp SE_HASH  &kp SE_DLR  &kp SE_PERC    &kp SE_AT    &kp SE_QUES  &kp SE_LBRC  &kp SE_RBRC  &kp SE_DLR  &kp SE_ASTR
    &kp LSHFT  &none        &kp SE_PND   &kp SE_EURO  &kp SE_AT   &kp SE_CURR    &none        &kp SE_ASTR  &kp SE_LCBR  &kp SE_RCBR  &none       &none
-                           &none        &trans       &none       &none          &trans       &none
+                           &none        &trans       &none       &caps_word     &trans       &none
                         >;
                 };
 
                 raise_layer {
                         label = "RAISE";
 // -----------------------------------------------------------------------------------------
-// |       |     |     |     |     |     |   |     |     |     |     |     |      |
-// |       |     |     |     |     |     |   |     |     |     |     |     |      |
-// |       |     |     |     |     |     |   |     |     |     |     |     |      |
-//                     |     |     |     |   |     |     |     |
+// |   ^   |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  DEL |
+// |  DEL  |  |  |  ~  |  <  |  >  |     |   |  '  |  +  |  `  |  å  |     |      |
+// | SHFT  |     |     |     |  |  |     |   |     |  *  |  {  |  }  |     |      |
+//                     | GUI |     | SPC |   |     |     | ALT |
                         bindings = <
   &kp SE_CIRC  &kp N1       &kp N2       &kp N3       &kp N4       &kp N5       &kp N6       &kp N7       &kp N8       &kp N9       &kp N0  &kp DEL 
   &kp DEL      &kp SE_PIPE  &kp SE_TILD  &kp SE_LABK  &kp SE_RABK  &none        &kp SE_QUOT  &kp SE_PLUS  &kp SE_GRV   &kp SE_ARNG  &none   &none
   &kp LSHFT    &none        &none        &none        &kp SE_PIPE  &none        &none        &kp SE_ASTR  &kp SE_LCBR  &kp SE_RCBR  &none   &none
-                                         &kp LGUI     &trans       &kp SPACE    &kp RET      &trans       &kp RALT
+                                         &kp LGUI     &trans       &kp SPACE    &none        &trans       &kp RALT
                         >;
                 };
 
@@ -131,12 +132,12 @@
                         label = "NUMBER";
 // -----------------------------------------------------------------------------------------
 // |  TAB |     |     |CPgUp|     |CPgDn|   |     |  7  |  8  |  9  |     | Bksp |
-// |      |     |     |     | Copy|Paste|   | Bksp|  4  |  5  |  6  |     |      |
+// |      |     |     |  Cut| Yank|Paste|   | Bksp|  4  |  5  |  6  |     |      |
 // | SHFT |     |     |     |     |     |   |     |  1  |  2  |  3  |     |      |
 //                    |     |     |     |   | TAB |  0  | ENT |
                         bindings = <
    &kp TAB    &none   C_PGUP  &none   C_PGDN  &none          &none    &kp N7  &kp N8  &kp N9 &none  &kp BSPC
-   &none      &none   &none   COPY    PASTE   &none          &kp BSPC &kp N4  &kp N5  &kp N6 &none  &none
+   &none      &none   CUT     YANK    PASTE   &none          &kp BSPC &kp N4  &kp N5  &kp N6 &none  &none
    &kp LSHFT  &none   &none   &none   &none   &none          &none    &kp N1  &kp N2  &kp N3 &none  &none 
                               &none   &none   &none          &kp TAB  &kp N0  &kp ENTER
                         >;
