@@ -109,7 +109,7 @@
   &kp SE_CIRC  &kp N1       &kp N2       &kp N3       &kp N4       &kp N5       &kp N6       &kp N7       &kp N8       &kp N9       &kp N0  &kp DEL 
   &kp DEL      &kp SE_PIPE  &kp SE_TILD  &kp SE_LABK  &kp SE_RABK  &none        &kp SE_QUOT  &kp SE_PLUS  &kp SE_GRV   &kp SE_ARNG  &none   &none
   &none        &none        &none        &none        &kp SE_PIPE  &none        &none        &kp SE_ASTR  &kp SE_LCBR  &kp SE_RCBR  &none   &none
-                      	                 &kp LGUI     &trans       &kp SPACE    &kp RET      &trans       &kp RALT
+                                         &kp LGUI     &trans       &kp SPACE    &kp RET      &trans       &kp RALT
                         >;
                 };
 
@@ -169,7 +169,7 @@
    &none      &none        &none        &none        &none        &none          &none  &none  &none  &none  &none  &none
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &none  &none  &none  &none  &none  &none
    &none      &none        &none        &none        &none        &none          &none  &none  &none  &none  &none  &none 
-                              	        &none        &none        &none          &none  &none  &none
+                                        &none        &none        &none          &none  &none  &none
                         >;
                 };
 
