@@ -23,7 +23,7 @@
         combo_col {
             timeout-ms = <50>;
             key-positions = <32 33>;
-            bindings = <&kp COLON>;
+            bindings = <&kp SE_COLN>;
         };
 
     };
