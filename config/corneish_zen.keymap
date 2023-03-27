@@ -31,7 +31,6 @@
 #define SPCNAV &lt NAV SPACE
 #define TABNUM &lt NUM TAB
 #define TABFNC &lt FUNC TAB
-#define SPCNAV &lt NAV SPACE
 #define SPC_GL &lt GAME_LOW SPACE
 
 #define C_PGUP &kp LC(PG_UP)
