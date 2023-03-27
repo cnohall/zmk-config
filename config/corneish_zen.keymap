@@ -134,14 +134,14 @@
                 game_low_layer {
                         label = "GLow";
 // -----------------------------------------------------------------------------------------
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+// |      |  8  |  7  |  6  |  5  |     |   |     |     |     |     |     |      |
+// |      |  4  |  3  |  2  |  1  |     |   |     |     |     |     |     |      |
+// |      |     |     |     |     | DEL |   |     |     |     |     |     |      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
    &trans  &kp N8  &kp N7  &kp N6  &kp N5  &trans    &trans  &trans  &trans  &trans  &trans  &trans
    &trans  &kp N4  &kp N3  &kp N2  &kp N1  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-   &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+   &trans  &trans  &trans  &trans  &trans  &kp DEL   &trans  &trans  &trans  &trans  &trans  &trans
                            &trans  &trans  &none     &trans  &trans  &trans
                         >;
                 };
@@ -169,10 +169,10 @@
 // | SHFT |     |     |     |     |     |   |     |  1  |  2  |  3  |  +  |      |
 //                    |     |     |     |   | TAB |  0  | ENT |
                         bindings = <
-   &kp TAB    &none   C_PGUP  &none   C_PGDN  &none          &kp KP_DIVIDE &kp N7  &kp N8  &kp N9 &kp KP_MULTIPLY  &kp BSPC
-   &none      &none   KUT     YANK    PASTE   &caps_word     &kp BSPC      &kp N4  &kp N5  &kp N6 &kp KP_MINUS     &none
-   &kp LSHFT  &none   &none   &none   &none   &none          &none         &kp N1  &kp N2  &kp N3 &kp KP_PLUS      &none
-                              &none   &none   &none          &kp TAB       &kp N0  &kp ENTER
+   &kp TAB    &none   C_PGUP  &none   C_PGDN  &none         &kp KP_DIVIDE &kp N7  &kp N8  &kp N9 &kp KP_MULTIPLY  &kp BSPC
+   &none      &none   KUT     YANK    PASTE   &caps_word    &kp BSPC      &kp N4  &kp N5  &kp N6 &kp KP_MINUS     &none
+   &kp LSHFT  &none   &none   &none   &none   &none         &none         &kp N1  &kp N2  &kp N3 &kp KP_PLUS      &none
+                              &none   &none   &none         &kp TAB       &kp N0  &kp ENTER
                         >;
                 };
 
