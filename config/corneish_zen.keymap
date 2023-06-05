@@ -30,6 +30,7 @@
 #define ENT_RS &lt RAISE ENTER
 #define SPCNAV &lt NAV SPACE
 #define TABNUM &lt NUM TAB
+#define TABNAV &lt NAV TAB
 #define TABFNC &lt FUNC TAB
 #define SPC_GL &lt GAME_LOW SPACE
 
@@ -81,8 +82,8 @@
                         bindings = <
    TABFNC    &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I       &kp O       &kp P       &kp SE_ARNG
    C_ESC     HM_A  HM_S  HM_D  HM_F  &kp G   &kp H HM_J   HM_K        HM_L        HM_ODIA     &kp SE_ADIA
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp SE_COMM &kp SE_DOT  &kp SE_MINS &kp ESC
-                   &kp LGUI  BS_LOW TABNUM   SPCNAV ENT_RS &kp RALT
+   TABNUM    &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp SE_COMM &kp SE_DOT  &kp SE_MINS &kp ESC
+                   &kp LGUI  BS_LOW TABNAV   &kp SPACE ENT_RS &kp RALT
                         >;
                 };
 
