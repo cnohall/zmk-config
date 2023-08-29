@@ -10,6 +10,7 @@
 #include <dt-bindings/zmk/bt.h>
 
 #include "keymap_swedish.h"
+#include "macros.h"
 #include "combos.h"
 #include "homerow.h"
 
