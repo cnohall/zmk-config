@@ -1,10 +1,18 @@
 / {
     macros {
-        ZMK_MACRO(macro_circ,
-            wait-ms = <30>;
-            tap-ms = <40>;
-            bindings = <&kp SE_CIRC &kp SPACE>;
-            layers = QUERTY;
-        )
+    /* Macro macro: */
+#define str(s) #s
+#define MACRO(NAME, BINDINGS) \
+        macro_##NAME: macro_##NAME { \
+            compatible = "zmk,behavior-macro"; \
+            label = str(macro_##NAME); \
+            #binding-cells = <0>; \
+            wait-ms = <30>; \
+            tap-ms = <40>; \
+            bindings = <BINDINGS>; \
+            layers = QUERTY; \
+        };
+
+        MACRO(circ, &kp SE_CIRC &kp SPACE)
     };
 };
