@@ -10,7 +10,6 @@
             wait-ms = <30>; \
             tap-ms = <40>; \
             bindings = <BINDINGS>; \
-            layers = QUERTY; \
         };
 
         MACRO(circ, &kp SE_CIRC &kp SPACE)
