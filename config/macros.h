@@ -13,5 +13,7 @@
         };
 
         MACRO(circ, &kp SE_CIRC &kp SPACE)
+        MACRO(tild, &kp SE_TILD &kp SPACE)
+        MACRO(grv, &kp SE_GRV &kp SPACE)
     };
 };

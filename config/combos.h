@@ -67,6 +67,20 @@
             bindings = <&kp SE_BSLS>;
         };
 
+        combo_tild {
+            timeout-ms = <50>;
+            key-positions = <14 26>;
+            layers = <0>;
+            bindings = <&macro_tild>;
+        };
+
+        combo_grv {
+            timeout-ms = <50>;
+            key-positions = <15 27>;
+            layers = <0>;
+            bindings = <&macro_grv>;
+        };
+
         combo_bspc {
             timeout-ms = <50>;
             key-positions = <31 32>;
@@ -79,13 +93,6 @@
             key-positions = <31 33>;
             layers = <0>;
             bindings = <&kp DEL>;
-        };
-
-        combo_ret {
-            timeout-ms = <50>;
-            key-positions = <25 26>;
-            layers = <0>;
-            bindings = <&kp RET>;
         };
 
         combo_col {
