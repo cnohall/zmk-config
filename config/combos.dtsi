@@ -1,0 +1,37 @@
+/*                KEY POSITIONS
+
+  ╭────────────────────────╮ ╭────────────────────────╮
+  │  0   1   2   3   4   5 │ │  6   7   8   9  10  11 │
+  │ 12  13  14  15  16  17 │ │ 18  19  20  21  22  23 │
+  │ 24  25  26  27  28  29 │ │ 30  31  32  33  34  35 │
+  ╰───────────╮ 36  37  38 │ │ 39  40  41 ╭───────────╯
+              ╰────────────╯ ╰────────────╯            */
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+        #define COMBO(NAME, BINDINGS, KEYPOS, LAYERS) \
+        combo_##NAME { \
+          timeout-ms = <50>; \
+          bindings = <BINDINGS>; \
+          key-positions = <KEYPOS>; \
+          layers = <LAYERS>; \
+        };
+
+        COMBO(at, &kp SE_AT, 1 2, QWERTY)
+        COMBO(hash, &kp SE_HASH, 3 15, QWERTY)
+        COMBO(dlr, &kp SE_DLR, 4 16, QWERTY)
+        COMBO(perc, &kp SE_PERC, QWERTY)
+        COMBO(circ, &macro_circ, 6 18, QWERTY)
+        COMBO(amp, &kp SE_AMPR, 7 19, QWERTY)
+        COMBO(astr, &kp SE_ASTR, 8 20, QWERTY)
+        COMBO(bsls, &kp SE_BSLS, 9 21, QWERTY)
+        COMBO(tild, &macro_tild, 14 26, QWERTY)
+        COMBO(grv, &macro_grv, 15 27, QWERTY)
+        COMBO(bspc, &kp BSPC, 31 32, QWERTY)
+        COMBO(del, &kp DEL, 31 33, QWERTY)
+        COMBO(col, &kp SE_COLN, 32 33, QWERTY)
+
+    };
+};
