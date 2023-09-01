@@ -22,7 +22,7 @@
         COMBO(at, &kp SE_AT, 1 2, QWERTY)
         COMBO(hash, &kp SE_HASH, 3 15, QWERTY)
         COMBO(dlr, &kp SE_DLR, 4 16, QWERTY)
-        COMBO(perc, &kp SE_PERC, QWERTY)
+        COMBO(perc, &kp SE_PERC, 5 17,QWERTY)
         COMBO(circ, &macro_circ, 6 18, QWERTY)
         COMBO(amp, &kp SE_AMPR, 7 19, QWERTY)
         COMBO(astr, &kp SE_ASTR, 8 20, QWERTY)
