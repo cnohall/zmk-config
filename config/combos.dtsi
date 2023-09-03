@@ -71,4 +71,4 @@ COMBO(grv, &macro_grv, 15 27, RAISE)
 COMBO(col, &kp SE_COLN, 32 33, RAISE)
 
 /* Game */
-COMBO(vill, &macro_vill, 15 16, GAME)
+//COMBO(vill, &macro_vill, 15 16, GAME)
