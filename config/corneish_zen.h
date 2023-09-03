@@ -10,6 +10,9 @@
 #define ADJUST 8
 
 // CUSTOM KEY CODES
+#define XXX &none
+#define ___ &trans
+
 #define C_ESC  &mt LCTRL ESC
 #define BS_LOW &lt LOWER BSPC
 #define ENT_RS &lt RAISE ENTER

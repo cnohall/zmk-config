@@ -7,31 +7,68 @@
   ╰───────────╮ 36  37  38 │ │ 39  40  41 ╭───────────╯
               ╰────────────╯ ╰────────────╯            */
 
-/ {
-    combos {
-        compatible = "zmk,combos";
+compatible = "zmk,combos";
 
-        #define COMBO(NAME, BINDINGS, KEYPOS, LAYERS) \
-        combo_##NAME { \
-          timeout-ms = <50>; \
-          bindings = <BINDINGS>; \
-          key-positions = <KEYPOS>; \
-          layers = <LAYERS>; \
-        };
-
-        COMBO(at, &kp SE_AT, 1 2, QWERTY)
-        COMBO(hash, &kp SE_HASH, 3 15, QWERTY)
-        COMBO(dlr, &kp SE_DLR, 4 16, QWERTY)
-        COMBO(perc, &kp SE_PERC, 5 17,QWERTY)
-        COMBO(circ, &macro_circ, 6 18, QWERTY)
-        COMBO(amp, &kp SE_AMPR, 7 19, QWERTY)
-        COMBO(astr, &kp SE_ASTR, 8 20, QWERTY)
-        COMBO(bsls, &kp SE_BSLS, 9 21, QWERTY)
-        COMBO(tild, &macro_tild, 14 26, QWERTY)
-        COMBO(grv, &macro_grv, 15 27, QWERTY)
-        COMBO(bspc, &kp BSPC, 31 32, QWERTY)
-        COMBO(del, &kp DEL, 31 33, QWERTY)
-        COMBO(col, &kp SE_COLN, 32 33, QWERTY)
-
-    };
+#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS) \
+combo_##NAME { \
+  timeout-ms = <50>; \
+  bindings = <BINDINGS>; \
+  key-positions = <KEYPOS>; \
+  layers = <LAYERS>; \
 };
+
+/* Brackets */
+COMBO(left_parenthesis, &kp SE_LPRN, 2 3, NUM)
+COMBO(right_parenthesis, &kp SE_RPRN, 3 4, NUM)
+COMBO(parentheses, &macro_parentheses, 2 3 4, NUM)
+COMBO(left_bracket, &kp SE_LBRC, 14 15, NUM)
+COMBO(right_bracket, &kp SE_RBRC, 15 16, NUM)
+COMBO(brackets, &macro_brackets, 14 15 16, NUM)
+COMBO(less_than, &kp SE_LABK, 26 27, NUM)
+COMBO(greater_than, &kp SE_RABK, 27 28, NUM)
+COMBO(ltgt, &macro_ltgt, 26 27 28, NUM)
+
+/* Text processing */
+COMBO(undo, &kp LC(Z), 25 26, BASE)
+COMBO(cut, &kp LC(X), 26 28, BASE)
+COMBO(copy, &kp LC(C), 26 27, BASE)
+COMBO(paste, &kp LC(V), 26 27 28, BASE)
+COMBO(select_all, &kp LC(A), 25 28, BASE)
+//COMBO(caps_word, &caps_word, 38 39, BASE)
+
+/* System */
+//COMBO(power, &macro_power, 5 6, BASE)
+//COMBO(menu_search, &kp LG(LS(SLASH)), 19 20 21, BASE)
+//COMBO(spotlight, &kp LG(SPACE), 14 15 16, BASE)
+//COMBO(mic_mute_left, &kp LG(BACKSLASH), 16 28, BASE)
+//COMBO(mic_mute_right, &kp LG(BACKSLASH), 19 31, BASE)
+
+/* Window management */
+//COMBO(tile_left, &kp LG(LS(LEFT)), 31 32, BASE)
+//COMBO(tile_right, &kp LG(LS(RIGHT)), 32 33, BASE)
+//COMBO(maximize, &kp LG(LS(UP)), 31 32 33, BASE)
+//COMBO(center, &kp LG(LS(DOWN)), 31 33, BASE)
+
+/* Media */
+//COMBO(volup, &kp C_VOL_UP, 8 20, NAV)
+//COMBO(voldown, &kp C_VOL_DN, 20 32, NAV)
+//COMBO(playpause, &kp C_PLAY_PAUSE, 31 33, NAV)
+//COMBO(prev, &kp C_PREV, 31 32, NAV)
+//COMBO(next, &kp C_NEXT, 32 33, NAV)
+
+COMBO(at, &kp SE_AT, 1 2, RAISE)
+COMBO(hash, &kp SE_HASH, 3 15, RAISE)
+COMBO(dlr, &kp SE_DLR, 4 16, RAISE)
+COMBO(perc, &kp SE_PERC, 5 17, RAISE)
+COMBO(circ, &macro_circ, 6 18, LOWER)
+COMBO(amp, &kp SE_AMPR, 7 19, LOWER)
+COMBO(astr, &kp SE_ASTR, 8 20, LOWER)
+COMBO(bsls, &kp SE_BSLS, 9 21, LOWER)
+COMBO(tild, &macro_tild, 14 26, RAISE)
+COMBO(grv, &macro_grv, 15 27, RAISE)
+//COMBO(bspc, &kp BSPC, 31 32, RAISE)
+//COMBO(del, &kp DEL, 31 33, RAISE)
+COMBO(col, &kp SE_COLN, 32 33, RAISE)
+
+/* Game */
+COMBO(vill, &macro_vill, 15 16, GAME)

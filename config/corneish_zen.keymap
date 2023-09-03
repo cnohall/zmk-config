@@ -11,8 +11,6 @@
 
 #include "keymap_swedish.h"
 #include "corneish_zen.h"
-#include "macros.dtsi"
-#include "combos.dtsi"
 #include "homerow.dtsi"
 
 / {
@@ -36,6 +34,16 @@
 };
 
 / {
+
+  combos {
+    #include "combos.dtsi"
+  };
+
+  macros {
+    #include "macros.dtsi"
+  };
+
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -79,8 +87,8 @@
                         bindings = <
    &kp SE_AT  &kp SE_EXLM  &kp SE_DQUO  &kp SE_HASH  &kp SE_DLR  &kp SE_PERC    &kp SE_AMPR  &kp SE_SLSH  &kp SE_LPRN  &kp SE_RPRN  &kp SE_EQL  &kp SE_BSLS
    &kp SE_AT  &kp SE_EXLM  &kp SE_DQUO  &kp SE_HASH  &kp SE_DLR  &kp SE_PERC    &kp SE_AT    &kp SE_QUES  &kp SE_LBRC  &kp SE_RBRC  &kp SE_DLR  &kp SE_ASTR
-   &kp LSHFT  &none        &kp SE_PND   &kp SE_EURO  &kp SE_AT   &kp SE_CURR    &none        &kp SE_ASTR  &kp SE_LCBR  &kp SE_RCBR  &none       &none
-                           &none        &trans       &none       &trans         &trans       &none
+   &kp LSHFT  XXX          &kp SE_PND   &kp SE_EURO  &kp SE_AT   &kp SE_CURR    XXX          &kp SE_ASTR  &kp SE_LCBR  &kp SE_RCBR  XXX         XXX
+                           XXX          ___          XXX         ___            ___          XXX
                         >;
                 };
 
@@ -93,9 +101,9 @@
 //                     | GUI |     | SPC |   |     |     | ALT |
                         bindings = <
   &kp SE_CIRC  &kp N1       &kp N2       &kp N3       &kp N4       &kp N5       &kp N6       &kp N7       &kp N8       &kp N9       &kp N0  &kp DEL
-  &kp DEL      &kp SE_PIPE  &kp SE_TILD  &kp SE_LABK  &kp SE_RABK  &none        &kp SE_QUOT  &kp SE_PLUS  &kp SE_GRV   &kp SE_ARNG  &none   &none
-  &kp LSHFT    &none        &none        &none        &kp SE_PIPE  &none        &none        &kp SE_ASTR  &kp SE_LCBR  &kp SE_RCBR  &none   &none
-                                         &kp LGUI     &trans       &kp SPACE    &none        &trans       &kp RALT
+  &kp DEL      &kp SE_PIPE  &kp SE_TILD  &kp SE_LABK  &kp SE_RABK  XXX          &kp SE_QUOT  &kp SE_PLUS  &kp SE_GRV   &kp SE_ARNG  XXX     XXX
+  &kp LSHFT    XXX          XXX          XXX          &kp SE_PIPE  XXX          XXX          &kp SE_ASTR  &kp SE_LCBR  &kp SE_RCBR  XXX     XXX
+                                         &kp LGUI     ___          &kp SPACE    XXX          ___          &kp RALT
                         >;
                 };
 
@@ -107,10 +115,10 @@
 // |      |     |     |     |     | DEL |   |     |     |     |     |     |      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
-   &trans  &kp N8  &kp N7  &kp N6  &kp N5  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-   &trans  &kp N4  &kp N3  &kp N2  &kp N1  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-   &trans  &trans  &trans  &trans  &trans  &kp DEL   &trans  &trans  &trans  &trans  &trans  &trans
-                           &trans  &trans  &none     &trans  &trans  &trans
+   ___     &kp N8  &kp N7  &kp N6  &kp N5  ___       ___     ___     ___     ___     ___     ___
+   ___     &kp N4  &kp N3  &kp N2  &kp N1  ___       ___     ___     ___     ___     ___     ___
+   ___     ___     ___     ___     ___     &kp DEL   ___     ___     ___     ___     ___     ___
+                           ___     ___     XXX       ___     ___     ___
                         >;
                 };
 
@@ -122,10 +130,10 @@
 // |       |     |     |Comnt| Dupl|     |   |     | Yank|Paste|     |     |      |
 //                     |     |     |     |   |     |     |     |
                         bindings = <
-   &none    &none    &kp LGUI &kp LALT  &none     &kp PG_UP    YANK     C_PGUP    &none   C_PGDN     PASTE   &none
-   &kp BSPC &kp HOME &kp END  &kp LCTRL &kp LSHFT &kp PG_DN    &kp LEFT &kp DOWN  &kp UP  &kp RIGHT  &kp DEL &none
-   &none    &none    &none    COMNT     DUPLIC    &none        &none    YANK      PASTE   &none      &none   &kp PSCRN
-                              &none     &none     &none        &none    &none     &none
+   XXX      XXX      &kp LGUI &kp LALT  XXX       &kp PG_UP    YANK     C_PGUP    XXX     C_PGDN     PASTE   XXX
+   &kp BSPC &kp HOME &kp END  &kp LCTRL &kp LSHFT &kp PG_DN    &kp LEFT &kp DOWN  &kp UP  &kp RIGHT  &kp DEL XXX
+   XXX      XXX      XXX      COMNT     DUPLIC    XXX          XXX      YANK      PASTE   XXX        XXX     &kp PSCRN
+                              XXX       XXX       XXX          XXX      XXX       XXX
                         >;
                 };
 
@@ -137,10 +145,10 @@
 // | SHFT |     |     |     |     |     |   |     |  1  |  2  |  3  |  +  |      |
 //                    |     |     |     |   | TAB |  0  | ENT |
                         bindings = <
-   &kp TAB    &none   C_PGUP  &none   C_PGDN  &none         &kp KP_DIVIDE &kp N7  &kp N8  &kp N9 &kp KP_MULTIPLY  &kp BSPC
-   &none      &none   KUT     YANK    PASTE   &caps_word    &kp BSPC      &kp N4  &kp N5  &kp N6 &kp KP_MINUS     &none
-   &none      &none   &none   &none   &none   &none         &none         &kp N1  &kp N2  &kp N3 &kp KP_PLUS      &caps_word
-                              &none   &none   &none         &kp TAB       &kp N0  &kp ENTER
+   &kp TAB    XXX     C_PGUP  XXX     C_PGDN  XXX           &kp KP_DIVIDE &kp N7  &kp N8  &kp N9 &kp KP_MULTIPLY  &kp BSPC
+   XXX        XXX     KUT     YANK    PASTE   &caps_word    &kp BSPC      &kp N4  &kp N5  &kp N6 &kp KP_MINUS     XXX
+   XXX        XXX     XXX     XXX     XXX     XXX           XXX           &kp N1  &kp N2  &kp N3 &kp KP_PLUS      &caps_word
+                              XXX     XXX     XXX           &kp TAB       &kp N0  &kp ENTER
                         >;
                 };
 
@@ -152,10 +160,10 @@
 // |      |     |     |     |     |     |   | F12 |  F1 |  F2 |  F3 |     |       |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
-   &none  &none     &none     &none      &none      &none    &kp F10  &kp F7  &kp F8  &kp F9  &none  &none
-   &none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &kp F11  &kp F4  &kp F5  &kp F6  &none  &none
-   &none  &none     &none     &none      &none      &none    &kp F12  &kp F1  &kp F2  &kp F3  &none  &none
-                              &none      &none      &none    &none    &none   &none
+   XXX    XXX       XXX       XXX        XXX        XXX      &kp F10  &kp F7  &kp F8  &kp F9  XXX    XXX
+   XXX    &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  XXX      &kp F11  &kp F4  &kp F5  &kp F6  XXX    XXX
+   XXX    XXX       XXX       XXX        XXX        XXX      &kp F12  &kp F1  &kp F2  &kp F3  XXX    XXX
+                              XXX        XXX        XXX      XXX      XXX     XXX
                         >;
                 };
 
@@ -167,10 +175,10 @@
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
-   &none      &none        &none        &none        &none        &none          &none    &none  &none  &none  &none  &none
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &to GAME &none  &none  &none  &none  &none
-   &none      &none        &none        &none        &none        &none          &none    &none  &none  &none  &none  &none
-                                        &none        &none        &none          &none    &none  &none
+   XXX        XXX          XXX          XXX          XXX          XXX            XXX      XXX    XXX    XXX    XXX    XXX
+   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &to GAME XXX    XXX    XXX    XXX    XXX
+   XXX        XXX          XXX          XXX          XXX          XXX            XXX      XXX    XXX    XXX    XXX    XXX
+                                        XXX          XXX          XXX            XXX      XXX    XXX
                         >;
                 };
 

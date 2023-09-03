@@ -1,19 +1,23 @@
-/ {
-    macros {
-    /* Macro macro: */
 #define str(s) #s
 #define MACRO(NAME, BINDINGS) \
-        macro_##NAME: macro_##NAME { \
-            compatible = "zmk,behavior-macro"; \
-            label = str(macro_##NAME); \
-            #binding-cells = <0>; \
-            wait-ms = <30>; \
-            tap-ms = <40>; \
-            bindings = <BINDINGS>; \
-        };
+  macro_##NAME: macro_##NAME { \
+      compatible = "zmk,behavior-macro"; \
+      label = str(macro_##NAME); \
+      #binding-cells = <0>; \
+      wait-ms = <30>; \
+      tap-ms = <40>; \
+      bindings = <BINDINGS>; \
+  };
 
-        MACRO(circ, &kp SE_CIRC &kp SPACE)
-        MACRO(tild, &kp SE_TILD &kp SPACE)
-        MACRO(grv, &kp SE_GRV &kp SPACE)
-    };
-};
+/* Dead letters */
+MACRO(circ, &kp SE_CIRC &kp SPACE)
+MACRO(tild, &kp SE_TILD &kp SPACE)
+MACRO(grv, &kp SE_GRV &kp SPACE)
+
+/* Brackets */
+MACRO(parentheses, &kp SE_LPRN &kp SE_RPRN &kp LEFT)
+MACRO(brackets, &kp SE_LBRC &kp SE_RBRC &kp LEFT)
+MACRO(ltgt, &kp SE_LABK &kp SE_RABK &kp LEFT)
+
+/* Game */
+MACRO(vill, &kp LC(A) &kp LS(Q))
