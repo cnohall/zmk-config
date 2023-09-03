@@ -20,4 +20,4 @@ MACRO(brackets, &kp SE_LBRC &kp SE_RBRC &kp LEFT)
 MACRO(ltgt, &kp SE_LABK &kp SE_RABK &kp LEFT)
 
 /* Game */
-//MACRO(vill, &kp LC(A) &kp LS(Q))
+MACRO(vill, &kp LC(A) &kp LS(Q))

@@ -29,25 +29,25 @@ COMBO(greater_than, &kp SE_RABK, 27 28, NUM)
 COMBO(ltgt, &macro_ltgt, 26 27 28, NUM)
 
 /* Text processing */
-COMBO(undo, &kp LC(Z), 25 26, BASE)
-COMBO(cut, &kp LC(X), 26 28, BASE)
-COMBO(copy, &kp LC(C), 26 27, BASE)
-COMBO(paste, &kp LC(V), 26 27 28, BASE)
-COMBO(select_all, &kp LC(A), 25 28, BASE)
-//COMBO(caps_word, &caps_word, 38 39, BASE)
+COMBO(undo, &kp LC(Z), 25 26, QWERTY)
+COMBO(cut, &kp LC(X), 26 28, QWERTY)
+COMBO(copy, &kp LC(C), 26 27, QWERTY)
+COMBO(paste, &kp LC(V), 26 27 28, QWERTY)
+COMBO(select_all, &kp LC(A), 25 28, QWERTY)
+COMBO(caps_word, &caps_word, 28 31, QWERTY)
 
 /* System */
-//COMBO(power, &macro_power, 5 6, BASE)
-//COMBO(menu_search, &kp LG(LS(SLASH)), 19 20 21, BASE)
-//COMBO(spotlight, &kp LG(SPACE), 14 15 16, BASE)
-//COMBO(mic_mute_left, &kp LG(BACKSLASH), 16 28, BASE)
-//COMBO(mic_mute_right, &kp LG(BACKSLASH), 19 31, BASE)
+//COMBO(power, &macro_power, 5 6, QWERTY)
+//COMBO(menu_search, &kp LG(LS(SLASH)), 19 20 21, QWERTY)
+//COMBO(spotlight, &kp LG(SPACE), 14 15 16, QWERTY)
+//COMBO(mic_mute_left, &kp LG(BACKSLASH), 16 28, QWERTY)
+//COMBO(mic_mute_right, &kp LG(BACKSLASH), 19 31, QWERTY)
 
 /* Window management */
-//COMBO(tile_left, &kp LG(LS(LEFT)), 31 32, BASE)
-//COMBO(tile_right, &kp LG(LS(RIGHT)), 32 33, BASE)
-//COMBO(maximize, &kp LG(LS(UP)), 31 32 33, BASE)
-//COMBO(center, &kp LG(LS(DOWN)), 31 33, BASE)
+//COMBO(tile_left, &kp LG(LS(LEFT)), 31 32, QWERTY)
+//COMBO(tile_right, &kp LG(LS(RIGHT)), 32 33, QWERTY)
+//COMBO(maximize, &kp LG(LS(UP)), 31 32 33, QWERTY)
+//COMBO(center, &kp LG(LS(DOWN)), 31 33, QWERTY)
 
 /* Media */
 //COMBO(volup, &kp C_VOL_UP, 8 20, NAV)
@@ -71,4 +71,4 @@ COMBO(grv, &macro_grv, 15 27, RAISE)
 COMBO(col, &kp SE_COLN, 32 33, RAISE)
 
 /* Game */
-//COMBO(vill, &macro_vill, 15 16, GAME)
+COMBO(vill, &macro_vill, 15 16, GAME)
