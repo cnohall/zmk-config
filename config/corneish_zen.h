@@ -1,3 +1,4 @@
+// clang-format off
 // LAYERS
 #define QWERTY 0
 #define GAME 1
@@ -5,9 +6,10 @@
 #define RAISE 3
 #define GAME_LOW 4
 #define NAV 5
-#define NUM 6
-#define FUNC 7
-#define ADJUST 8
+#define WM 6
+#define NUM 7
+#define FUNC 8
+#define ADJUST 9
 
 // CUSTOM KEY CODES
 #define XXX &none
@@ -21,6 +23,9 @@
 #define TABNAV &lt NAV TAB
 #define TABFNC &lt FUNC TAB
 #define SPC_GL &lt GAME_LOW SPACE
+
+#define SLWM   &sl WM
+#define MOVE   &kp LSHFT
 
 #define TONAV  &to NAV
 #define TOBASE &to QWERTY
@@ -43,3 +48,4 @@
 #define HM_L &hm_sl LALT L
 #define HM_K &hm_dk LCTRL K
 #define HM_J &hm_fj LSHFT J
+// clang-format on

@@ -1,9 +1,9 @@
 /*
-*
-* Copyright (c) 2021 Darryl deHaan
-* SPDX-License-Identifier: MIT
-*
-*/
+ *
+ * Copyright (c) 2021 Darryl deHaan
+ * SPDX-License-Identifier: MIT
+ *
+ */
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -14,173 +14,211 @@
 #include "homerow.dtsi"
 
 / {
-  chosen {
+    chosen {
+        // clang-format off
     zmk,matrix_transform = &default_transform;
-  };
+        // clang-format on
+    };
 };
 
-&caps_word {
-  continue-list = <SE_UNDS SE_MINS BACKSPACE>;
-};
+// clang-format off
+&caps_word { continue-list = <SE_UNDS SE_MINS BACKSPACE>; };
+// clang-format on
 
 / {
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
+            // clang-format off
             if-layers = <LOWER RAISE>;
             then-layer = <ADJUST>;
+            // clang-format on
         };
     };
 };
 
 / {
+    combos{
+#include "combos.dtsi"
+    };
 
-  combos {
-    #include "combos.dtsi"
-  };
+    macros{
+#include "macros.dtsi"
+    };
 
-  macros {
-    #include "macros.dtsi"
-  };
+    keymap {
+        compatible = "zmk,keymap";
 
-
-        keymap {
-                compatible = "zmk,keymap";
-
-                default_layer {
-                        label = "QWERTY";
-// -----------------------------------------------------------------------------------------
-// |  TAB  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |  Å   |
-// |CTRLESC|  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  Ö  |  Ä   |
-// | SHFT  |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  -  | ESC  |
-//                     | GUI | LWR | TAB |   | SPC |RS-ENT| MEH |
-                        bindings = <
+        default_layer {
+            label = "QWERTY";
+            // -----------------------------------------------------------------------------------------
+            // |  TAB  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |  Å   |
+            // |CTRLESC|  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  Ö  |  Ä   |
+            // | SHFT  |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  -  | ESC  |
+            //                     | GUI | LWR | TAB |   | SPC |RS-ENT| MEH |
+            bindings = <
+                // clang-format off
    TABFNC    &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I       &kp O       &kp P       &kp SE_ARNG
    C_ESC      HM_A  HM_S  HM_D  HM_F &kp G   &kp H  HM_J   HM_K        HM_L        HM_ODIA    &kp SE_ADIA
-   TABNUM    &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp SE_COMM &kp SE_DOT  &kp SE_MINS &kp ESC
-                   &mo NUM  BS_LOW TABNAV    SPCNAV ENT_RS &kp MEH
-                        >;
-                };
+   SLWM    &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp SE_COMM &kp SE_DOT  &kp SE_MINS &kp ESC
+                   &mo NUM  BS_LOW TABNUM    SPCNAV ENT_RS &kp MEH
+                // clang-format on
+                >;
+        };
 
-                game_layer {
-                        label = "GAME";
-// -----------------------------------------------------------------------------------------
-// |  TAB  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |  Å   |
-// | CTRL  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  Ö  |  Ä   |
-// | SHFT  |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  -  | ESC  |
-//                     | GUI | LWR | TAB |   | SPC |RS-ENT| ALT |
-                        bindings = <
+        game_layer {
+            label = "GAME";
+            // -----------------------------------------------------------------------------------------
+            // |  TAB  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |  Å   |
+            // | CTRL  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  Ö  |  Ä   |
+            // | SHFT  |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  -  | ESC  |
+            //                     | GUI | LWR | TAB |   | SPC |RS-ENT| ALT |
+            bindings = <
+                // clang-format off
    &kp TAB   &kp Q &kp W   &kp E        &kp R &kp T   &kp Y  &kp U  &kp I       &kp O       &kp P       &kp SE_ARNG
    &kp LCTRL &kp A &kp S   &kp D        &kp F &kp G   &kp H  &kp J  &kp K       &kp L       &kp SE_ODIA &kp SE_ADIA
    &kp LSHFT &kp Z &kp X   &kp C        &kp V &kp B   &kp N  &kp M  &kp SE_COMM &kp SE_DOT  &kp SE_MINS &kp ESC
                    &kp ESC &kp LALT SPC_GL        SPCNAV ENT_RS &to QWERTY
-                        >;
-                };
+                // clang-format on
+                >;
+        };
 
-                lower_layer {
-                        label = "LOWER";
-// -----------------------------------------------------------------------------------------
-// |   @  |  !  |  "  |  #  |  $  |  %  |   |  &  |  /  |  (  |  )  |  =  |   \  |
-// |   @  |  !  |  "  |  #  |  $  |  %  |   |  @  |  ?  |  [  |  ]  |  $  |   *  |
-// | SHFT |     |  £  |  £  |  @  |  ¤  |   |     |  *  |  {  |  }  |     |      |
-//                    |     |     |     |   |CPSWD|     |     |
-                        bindings = <
+        lower_layer {
+            label = "LOWER";
+            // -----------------------------------------------------------------------------------------
+            // |   @  |  !  |  "  |  #  |  $  |  %  |   |  &  |  /  |  (  |  )  |  =  |   \  |
+            // |   @  |  !  |  "  |  #  |  $  |  %  |   |  @  |  ?  |  [  |  ]  |  $  |   *  |
+            // | SHFT |     |  £  |  £  |  @  |  ¤  |   |     |  *  |  {  |  }  |     |      |
+            //                    |     |     |     |   |CPSWD|     |     |
+            bindings = <
+                // clang-format off
    &kp SE_AT  &kp SE_EXLM  &kp SE_DQUO  &kp SE_HASH  &kp SE_DLR  &kp SE_PERC    &kp SE_AMPR  &kp SE_SLSH  &kp SE_LPRN  &kp SE_RPRN  &kp SE_EQL  &kp SE_BSLS
    &kp SE_AT  &kp SE_EXLM  &kp SE_DQUO  &kp SE_HASH  &kp SE_DLR  &kp SE_PERC    &kp SE_AT    &kp SE_QUES  &kp SE_LBRC  &kp SE_RBRC  &kp SE_DLR  &kp SE_ASTR
    &kp LSHFT  XXX          &kp SE_PND   &kp SE_EURO  &kp SE_AT   &kp SE_CURR    XXX          &kp SE_ASTR  &kp SE_LCBR  &kp SE_RCBR  XXX         XXX
                            XXX          ___          XXX         ___            ___          XXX
-                        >;
-                };
+                // clang-format on
+                >;
+        };
 
-                raise_layer {
-                        label = "RAISE";
-// -----------------------------------------------------------------------------------------
-// |   ^   |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  DEL |
-// |  DEL  |  |  |  ~  |  <  |  >  |     |   |  '  |  +  |  `  |  å  |     |      |
-// | SHFT  |     |     |     |  |  |     |   |     |  *  |  {  |  }  |     |      |
-//                     | GUI |     | SPC |   |     |     | ALT |
-                        bindings = <
+        raise_layer {
+            label = "RAISE";
+            // -----------------------------------------------------------------------------------------
+            // |   ^   |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  DEL |
+            // |  DEL  |  |  |  ~  |  <  |  >  |     |   |  '  |  +  |  `  |  å  |     |      |
+            // | SHFT  |     |     |     |  |  |     |   |     |  *  |  {  |  }  |     |      |
+            //                     | GUI |     | SPC |   |     |     | ALT |
+            bindings = <
+                // clang-format off
   &kp SE_CIRC  &kp N1       &kp N2       &kp N3       &kp N4       &kp N5       &kp N6       &kp N7       &kp N8       &kp N9       &kp N0  &kp DEL
   &kp DEL      &kp SE_PIPE  &kp SE_TILD  &kp SE_LABK  &kp SE_RABK  XXX          &kp SE_QUOT  &kp SE_PLUS  &kp SE_GRV   &kp SE_ARNG  XXX     XXX
   &kp LSHFT    XXX          XXX          XXX          &kp SE_PIPE  XXX          XXX          &kp SE_ASTR  &kp SE_LCBR  &kp SE_RCBR  XXX     XXX
                                          &kp LGUI     ___          &kp SPACE    XXX          ___          &kp RALT
-                        >;
-                };
+                // clang-format on
+                >;
+        };
 
-                game_low_layer {
-                        label = "GLow";
-// -----------------------------------------------------------------------------------------
-// |      |  8  |  7  |  6  |  5  |     |   |     |     |     |     |     |      |
-// |      |  4  |  3  |  2  |  1  |     |   |     |     |     |     |     |      |
-// |      |     |     |     |     | DEL |   |     |     |     |     |     |      |
-//                    |     |     |     |   |     |     |     |
-                        bindings = <
+        game_low_layer {
+            label = "GLow";
+            // -----------------------------------------------------------------------------------------
+            // |      |  8  |  7  |  6  |  5  |     |   |     |     |     |     |     |      |
+            // |      |  4  |  3  |  2  |  1  |     |   |     |     |     |     |     |      |
+            // |      |     |     |     |     | DEL |   |     |     |     |     |     |      |
+            //                    |     |     |     |   |     |     |     |
+            bindings = <
+                // clang-format off
    ___     &kp N8  &kp N7  &kp N6  &kp N5  ___       ___     ___     ___     ___     ___     ___
    ___     &kp N4  &kp N3  &kp N2  &kp N1  ___       ___     ___     ___     ___     ___     ___
    ___     ___     ___     ___     ___     &kp DEL   ___     ___     ___     ___     ___     ___
                            ___     ___     XXX       ___     ___     ___
-                        >;
-                };
+                // clang-format on
+                >;
+        };
 
-                nav_layer {
-                        label = "NAV";
-// -----------------------------------------------------------------------------------------
-// |       |     | Gui |  Alt|     | PgUp|   | Yank|CPgUp|     |CPgDn|Paste|      |
-// | Bspc  | Home| End | Ctrl|Shift| PgDn|   |   ← |   ↓ |   ↑ |   → | Del |      |
-// |       |     |     |Comnt| Dupl|     |   |     | Yank|Paste|     |     |      |
-//                     |     |     |     |   |     |     |     |
-                        bindings = <
+        nav_layer {
+            label = "NAV";
+            // -----------------------------------------------------------------------------------------
+            // |       |     | Gui |  Alt|     | PgUp|   | Yank|CPgUp|     |CPgDn|Paste|      |
+            // | Bspc  | Home| End | Ctrl|Shift| PgDn|   |   ← |   ↓ |   ↑ |   → | Del |      |
+            // |       |     |     |Comnt| Dupl|     |   |     | Yank|Paste|     |     |      |
+            //                     |     |     |     |   |     |     |     |
+            bindings = <
+                // clang-format off
    XXX      XXX      &kp LGUI &kp LALT  XXX       &kp PG_UP    YANK     C_PGUP    XXX     C_PGDN     PASTE   XXX
    &kp BSPC &kp HOME &kp END  &kp LCTRL &kp LSHFT &kp PG_DN    &kp LEFT &kp DOWN  &kp UP  &kp RIGHT  &kp DEL XXX
    XXX      XXX      XXX      COMNT     DUPLIC    XXX          XXX      YANK      PASTE   XXX        XXX     &kp PSCRN
                               XXX       XXX       XXX          TOBASE   XXX       XXX
-                        >;
-                };
+                // clang-format on
+                >;
+        };
 
-                number_layer {
-                        label = "NUMBER";
-// -----------------------------------------------------------------------------------------
-// |  TAB |     |CPgUp|     |CPgDn|     |   |  /  |  7  |  8  |  9  |  *  | Bksp |
-// |      |     |  Cut| Yank|Paste|CapsW|   | Bksp|  4  |  5  |  6  |  -  |      |
-// | SHFT |     |     |     |     |     |   |     |  1  |  2  |  3  |  +  |      |
-//                    |     |     |     |   | TAB |  0  | ENT |
-                        bindings = <
+        window_layer {
+            label = "WIN MAN";
+            // clang-format off
+            // -----------------------------------------------------------------------------------------
+            // |      |     |     |     |     |     |   |     |  GUI+7  |  GUI+8  |  GUI+9  |     |      |
+            // |      |     |     |     |     |     |   |     |  GUI+4  |  GUI+5  |  GUI+6  |     |      |
+            // |      |     |     |     |     |     |   |     |  GUI+1  |  GUI+2  |  GUI+3  |     |      |
+            //                    |     |     |     |   |     |  GUI+0  |     |
+            // clang-format on
+            bindings = <
+                // clang-format off
+   XXX  XXX  XXX  XXX  XXX  XXX        XXX  LG(N7)  LG(N8)  LG(N9) XXX  XXX
+   XXX  XXX  XXX  XXX  MOVE XXX        XXX  LG(N4)  LG(N5)  LG(N6) XXX  XXX
+   XXX  XXX  XXX  XXX  XXX  XXX        XXX  LG(N1)  LG(N2)  LG(N3) XXX  XXX
+                  XXX  XXX  XXX        XXX  XXX  XXX
+                // clang-format on
+                >;
+        };
+
+        number_layer {
+            label = "NUMBER";
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |     |CPgUp|     |CPgDn|     |   |  /  |  7  |  8  |  9  |  *  | Bksp |
+            // |      |     |  Cut| Yank|Paste|CapsW|   | Bksp|  4  |  5  |  6  |  -  |      |
+            // | SHFT |     |     |     |     |     |   |     |  1  |  2  |  3  |  +  |      |
+            //                    |     |     |     |   | TAB |  0  | ENT |
+            bindings = <
+                // clang-format off
    &kp TAB    XXX     C_PGUP  XXX     C_PGDN  XXX           &kp KP_DIVIDE &kp N7  &kp N8  &kp N9 &kp KP_MULTIPLY  &kp BSPC
    XXX        XXX     KUT     YANK    PASTE   &caps_word    &kp BSPC      &kp N4  &kp N5  &kp N6 &kp KP_MINUS     XXX
    XXX        XXX     XXX     XXX     XXX     XXX           XXX           &kp N1  &kp N2  &kp N3 &kp KP_PLUS      &caps_word
                               XXX     XXX     XXX           &kp TAB       &kp N0  &kp ENTER
-                        >;
-                };
+                // clang-format on
+                >;
+        };
 
-                function_layer {
-                        label = "FUNCTION";
-// -----------------------------------------------------------------------------------------
-// |      |     |     |     |     |     |   | F10 |  F7 |  F8 |  F9 |     |       |
-// |      | LGUI| LALT|LCTRL|LSHFT|     |   | F11 |  F4 |  F5 |  F6 |     |       |
-// |      |     |     |     |     |     |   | F12 |  F1 |  F2 |  F3 |     |       |
-//                    |     |     |     |   |     |     |     |
-                        bindings = <
+        function_layer {
+            label = "FUNCTION";
+            // -----------------------------------------------------------------------------------------
+            // |      |     |     |     |     |     |   | F10 |  F7 |  F8 |  F9 |     |       |
+            // |      | LGUI| LALT|LCTRL|LSHFT|     |   | F11 |  F4 |  F5 |  F6 |     |       |
+            // |      |     |     |     |     |     |   | F12 |  F1 |  F2 |  F3 |     |       |
+            //                    |     |     |     |   |     |     |     |
+            bindings = <
+                // clang-format off
    XXX    XXX       XXX       XXX        XXX        XXX      &kp F10  &kp F7  &kp F8  &kp F9  XXX    XXX
    XXX    &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  XXX      &kp F11  &kp F4  &kp F5  &kp F6  XXX    XXX
    XXX    XXX       XXX       XXX        XXX        XXX      &kp F12  &kp F1  &kp F2  &kp F3  XXX    XXX
                               XXX        XXX        XXX      XXX      XXX     XXX
-                        >;
-                };
+                // clang-format on
+                >;
+        };
 
-                adjust_layer {
-                        label = "ADJUST";
-// -----------------------------------------------------------------------------------------
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |     |     |     |      |
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    |     |     |     |   |     |     |     |
-                        bindings = <
+        adjust_layer {
+            label = "ADJUST";
+            // -----------------------------------------------------------------------------------------
+            // |      |     |     |     |     |     |   |     |     |     |     |     |      |
+            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |     |     |     |      |
+            // |      |     |     |     |     |     |   |     |     |     |     |     |      |
+            //                    |     |     |     |   |     |     |     |
+            bindings = <
+                // clang-format off
    XXX        XXX          XXX          XXX          XXX          XXX            XXX      XXX    XXX    XXX    XXX    XXX
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &to GAME XXX    XXX    XXX    XXX    XXX
    XXX        XXX          XXX          XXX          XXX          XXX            XXX      XXX    XXX    XXX    XXX    XXX
                                         XXX          XXX          XXX            XXX      XXX    XXX
-                        >;
-                };
-
+                // clang-format on
+                >;
         };
+    };
 };
