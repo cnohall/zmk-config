@@ -58,7 +58,7 @@
    TABFNC    &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I       &kp O       &kp P       &kp SE_ARNG
    C_ESC      HM_A  HM_S  HM_D  HM_F &kp G   &kp H  HM_J   HM_K        HM_L        HM_ODIA    &kp SE_ADIA
    TABNUM    &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp SE_COMM &kp SE_DOT  &kp SE_MINS &kp ESC
-                   &kp LGUI  BS_LOW TABNAV   ENT_RS &kp SPACE &kp MEH
+                   &mo NUM  BS_LOW TABNAV    SPCNAV ENT_RS &kp MEH
                         >;
                 };
 
@@ -133,7 +133,7 @@
    XXX      XXX      &kp LGUI &kp LALT  XXX       &kp PG_UP    YANK     C_PGUP    XXX     C_PGDN     PASTE   XXX
    &kp BSPC &kp HOME &kp END  &kp LCTRL &kp LSHFT &kp PG_DN    &kp LEFT &kp DOWN  &kp UP  &kp RIGHT  &kp DEL XXX
    XXX      XXX      XXX      COMNT     DUPLIC    XXX          XXX      YANK      PASTE   XXX        XXX     &kp PSCRN
-                              XXX       XXX       XXX          XXX      XXX       XXX
+                              XXX       XXX       XXX          TOBASE   XXX       XXX
                         >;
                 };
 

@@ -22,6 +22,9 @@
 #define TABFNC &lt FUNC TAB
 #define SPC_GL &lt GAME_LOW SPACE
 
+#define TONAV  &to NAV
+#define TOBASE &to QWERTY
+
 #define MEH        LC(LS(LALT))
 #define C_PGUP &kp LC(PG_UP)
 #define C_PGDN &kp LC(PG_DN)
