@@ -155,7 +155,7 @@
    XXX      XXX      &kp LGUI &kp LALT  XXX       &kp PG_UP    YANK     C_PGUP    XXX     C_PGDN     PASTE   XXX
    TOBASE   &kp HOME &kp END  &kp LCTRL &kp LSHFT &kp PG_DN    &kp LEFT &kp DOWN  &kp UP  &kp RIGHT  &kp DEL XXX
    XXX      XXX      XXX      COMNT     DUPLIC    XXX          CLeft    YANK      PASTE   CRight     XXX     &kp PSCRN
-                              XXX       XXX       XXX          TOBASE   &kp ENTER XXX
+                              XXX       &kp BSPC  &kp TAB      TOBASE   &kp ENTER XXX
                 // clang-format on
                 >;
         };
