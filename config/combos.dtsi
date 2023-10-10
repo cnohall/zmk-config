@@ -45,6 +45,10 @@ COMBO(tonav, TONAV, 31 32, QWERTY)
 //COMBO(mic_mute_right, &kp LG(BACKSLASH), 19 31, QWERTY)
 
 /* Window management */
+COMBO(browser_bk, &kp LA(LEFT), 5 17, QWERTY)
+COMBO(browser_fw, &kp LA(RIGHT), 6 18, QWERTY)
+
+/* Window management */
 //COMBO(tile_left, &kp LG(LS(LEFT)), 31 32, QWERTY)
 //COMBO(tile_right, &kp LG(LS(RIGHT)), 32 33, QWERTY)
 //COMBO(maximize, &kp LG(LS(UP)), 31 32 33, QWERTY)
