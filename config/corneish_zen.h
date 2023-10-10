@@ -17,6 +17,8 @@
 
 #define CLeft  &kp LC(LEFT)
 #define CRight &kp LC(RIGHT)
+#define NEXT &kp LC(K)
+#define PREV &kp LC(LS(K))
 
 #define C_ESC  &mt LCTRL ESC
 #define BS_LOW &lt LOWER BSPC

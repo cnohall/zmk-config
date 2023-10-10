@@ -19,5 +19,8 @@ MACRO(parentheses, &kp SE_LPRN &kp SE_RPRN &kp LEFT)
 MACRO(brackets, &kp SE_LBRC &kp SE_RBRC &kp LEFT)
 MACRO(ltgt, &kp SE_LABK &kp SE_RABK &kp LEFT)
 
+/* Ture */
+MACRO(td, &kp T &kp D &kp SE_LBRC &kp SE_RBRC &kp LEFT)
+
 /* Game */
 MACRO(vill, &kp LC(A) &kp LS(Q))
