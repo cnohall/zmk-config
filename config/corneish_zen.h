@@ -15,6 +15,9 @@
 #define XXX &none
 #define ___ &trans
 
+#define CLeft  &kp LC(LEFT)
+#define CRight &kp LC(RIGHT)
+
 #define C_ESC  &mt LCTRL ESC
 #define BS_LOW &lt LOWER BSPC
 #define ENT_RS &lt RAISE ENTER
@@ -25,7 +28,9 @@
 #define SPC_GL &lt GAME_LOW SPACE
 
 #define SLWM   &sl WM
-#define MOVE   &kp LSHFT
+#define MOVE   &sk LSHFT
+#define CLOSE  &kp LA(F4)       // ALT + F4
+#define CAD    &kp LC(LA(DEL))  // CTRL + ALT + DEL
 
 #define TONAV  &to NAV
 #define TOBASE &to QWERTY

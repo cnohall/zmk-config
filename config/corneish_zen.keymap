@@ -37,6 +37,15 @@
     };
 };
 
+&sk {  // sticky-key config
+    release-after-ms = <900>;  // release after 0.6s
+    quick-release;             // no double capitalization when rolling keys
+};
+
+&sl {  // sticky-layer config
+    ignore-modifiers;          // allow chording sticky mods & layers
+};
+
 / {
     combos{
 #include "combos.dtsi"
@@ -145,7 +154,7 @@
                 // clang-format off
    XXX      XXX      &kp LGUI &kp LALT  XXX       &kp PG_UP    YANK     C_PGUP    XXX     C_PGDN     PASTE   XXX
    &kp BSPC &kp HOME &kp END  &kp LCTRL &kp LSHFT &kp PG_DN    &kp LEFT &kp DOWN  &kp UP  &kp RIGHT  &kp DEL XXX
-   XXX      XXX      XXX      COMNT     DUPLIC    XXX          XXX      YANK      PASTE   XXX        XXX     &kp PSCRN
+   XXX      XXX      XXX      COMNT     DUPLIC    XXX          CLeft    YANK      PASTE   CRight     XXX     &kp PSCRN
                               XXX       XXX       XXX          TOBASE   XXX       XXX
                 // clang-format on
                 >;
@@ -162,10 +171,10 @@
             // clang-format on
             bindings = <
                 // clang-format off
-   XXX  XXX  XXX  XXX  XXX  XXX        XXX  LG(N7)  LG(N8)  LG(N9) XXX  XXX
-   XXX  XXX  XXX  XXX  MOVE XXX        XXX  LG(N4)  LG(N5)  LG(N6) XXX  XXX
-   XXX  XXX  XXX  XXX  XXX  XXX        XXX  LG(N1)  LG(N2)  LG(N3) XXX  XXX
-                  XXX  XXX  XXX        XXX  XXX  XXX
+   XXX  CLOSE XXX  XXX  XXX  XXX        XXX  &kp LG(N7)  &kp LG(N8)  &kp LG(N9) XXX  XXX
+   XXX  XXX   XXX  XXX  MOVE XXX        XXX  &kp LG(N4)  &kp LG(N5)  &kp LG(N6) XXX  XXX
+   XXX  XXX   XXX  XXX  XXX  XXX        XXX  &kp LG(N1)  &kp LG(N2)  &kp LG(N3) XXX  CAD
+                   XXX  XXX  XXX        XXX  &kp LG(N0)  XXX
                 // clang-format on
                 >;
         };
