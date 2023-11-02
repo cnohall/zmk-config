@@ -24,3 +24,7 @@ MACRO(td, &kp T &kp D &kp SE_LBRC &kp SE_RBRC &kp LEFT)
 
 /* Game */
 MACRO(vill, &kp LC(A) &kp LS(Q))
+
+/* Browser */
+MACRO(back, &macro_press &kp LALT &macro_tap &kp LEFT &macro_release &kp LALT )
+MACRO(forward, &macro_press &kp LALT &macro_tap &kp RIGHT &macro_release &kp LALT )
