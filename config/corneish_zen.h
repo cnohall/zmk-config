@@ -19,6 +19,12 @@
 #define CRight &kp LC(RIGHT)
 #define NEXT &kp LC(K)
 #define PREV &kp LC(LS(K))
+#define COMNT  &kp LC(SE_QUOT)
+#define DUPLIC &kp LC(LS(D))
+#define DLINE  &kp LC(D)
+#define YANK   &kp LC(INS)
+#define PASTE  &kp LS(INS)
+#define KUT    &kp LC(X)
 
 #define C_ESC  &mt LCTRL ESC
 #define BS_LOW &lt LOWER BSPC
@@ -40,11 +46,6 @@
 #define MEH        LC(LS(LALT))
 #define C_PGUP &kp LC(PG_UP)
 #define C_PGDN &kp LC(PG_DN)
-#define COMNT  &kp LC(SE_QUOT)
-#define DUPLIC &kp LC(LS(D))
-#define YANK   &kp LC(INS)
-#define PASTE  &kp LS(INS)
-#define KUT    &kp LC(X)
 
 // HOMEROW
 #define HM_A &hm_aodia LGUI A
