@@ -152,7 +152,7 @@
             //                     |     |     |     |   |     |     |     |
             bindings = <
                 // clang-format off
-   XXX      XXX      &kp LGUI &kp LALT  XXX       &kp PG_UP    YANK     C_PGUP    XXX     C_PGDN     PASTE   XXX
+   XXX      XXX      &kp LGUI &kp LALT  XXX       &kp PG_UP    YANK     TAB_PREV  XXX     TAB_NEXT   PASTE   XXX
    TOBASE   &kp HOME &kp END  &kp LCTRL &kp LSHFT &kp PG_DN    &kp LEFT &kp DOWN  &kp UP  &kp RIGHT  &kp DEL XXX
    XXX      XXX      DLINE    COMNT     DUPLIC    XXX          CLeft    YANK      PASTE   CRight     XXX     &kp PSCRN
                               XXX       &kp BSPC  &kp TAB      TOBASE   &kp ENTER XXX
@@ -188,10 +188,10 @@
             //                    |     |     |     |   | TAB |  0  | ENT |
             bindings = <
                 // clang-format off
-   &kp TAB    XXX     C_PGUP  PREV    C_PGDN  &macro_td     &kp KP_DIVIDE &kp N7  &kp N8  &kp N9 &kp KP_MULTIPLY  &kp BSPC
-   XXX        XXX     KUT     YANK    PASTE   NEXT          &kp BSPC      &kp N4  &kp N5  &kp N6 &kp KP_MINUS     XXX
-   XXX        XXX     XXX     XXX     XXX     XXX           XXX           &kp N1  &kp N2  &kp N3 &kp KP_PLUS      &caps_word
-                              XXX     XXX     XXX           &kp TAB       &kp N0  &kp ENTER
+   &kp TAB    XXX     TAB_PREV PREV    TAB_NEXT &macro_td     &kp KP_DIVIDE &kp N7  &kp N8  &kp N9 &kp KP_MULTIPLY  &kp BSPC
+   XXX        XXX     KUT      YANK    PASTE    NEXT          &kp BSPC      &kp N4  &kp N5  &kp N6 &kp KP_MINUS     XXX
+   XXX        XXX     XXX      XXX     XXX      XXX           XXX           &kp N1  &kp N2  &kp N3 &kp KP_PLUS      &caps_word
+                               XXX     XXX      XXX           &kp TAB       &kp N0  &kp ENTER
                 // clang-format on
                 >;
         };

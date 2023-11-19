@@ -43,9 +43,9 @@
 #define TONAV  &to NAV
 #define TOBASE &to QWERTY
 
-#define MEH        LC(LS(LALT))
-#define C_PGUP &kp LC(PG_UP)
-#define C_PGDN &kp LC(PG_DN)
+#define MEH      LC(LS(LALT))
+#define TAB_PREV &kp LC(PG_UP)
+#define TAB_NEXT &kp LC(PG_DN)
 
 // HOMEROW
 #define HM_A &hm_aodia LGUI A
