@@ -1,4 +1,5 @@
 // clang-format off
+
 // LAYERS
 #define QWERTY 0
 #define GAME 1
@@ -36,7 +37,6 @@
 #define SPC_GL &lt GAME_LOW SPACE
 
 #define SLWM   &sl WM
-#define MOVE   &sk LSHFT
 #define CLOSE  &kp LA(F4)       // ALT + F4
 #define CAD    &kp LC(LA(DEL))  // CTRL + ALT + DEL
 
@@ -47,13 +47,4 @@
 #define TAB_PREV &kp LC(PG_UP)
 #define TAB_NEXT &kp LC(PG_DN)
 
-// HOMEROW
-#define HM_A &hm_aodia LGUI A
-#define HM_S &hm_sl LALT S
-#define HM_D &hm_dk LCTRL D
-#define HM_F &hm_fj LSHFT F
-#define HM_ODIA &hm_aodia LGUI SE_ODIA
-#define HM_L &hm_sl LALT L
-#define HM_K &hm_dk LCTRL K
-#define HM_J &hm_fj LSHFT J
 // clang-format on
