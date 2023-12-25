@@ -4,38 +4,38 @@ ZMK_BEHAVIOR(m_circ, macro,
   tap-ms = <5>;
   bindings = <&kp SE_CIRC &kp SPACE>;
 )
-ZMK_BEHAVIOR(m_tild,
+ZMK_BEHAVIOR(m_tild, macro,
   wait-ms = <100>;
   tap-ms = <5>;
   bindings = <&kp SE_TILD &kp SPACE>;
 )
-ZMK_BEHAVIOR(m_grv,
+ZMK_BEHAVIOR(m_grv, macro,
   wait-ms = <100>;
   tap-ms = <5>;
   bindings = <&kp SE_GRV &kp SPACE>;
 )
 
 /* Ture */
-ZMK_BEHAVIOR(m_td,
+ZMK_BEHAVIOR(m_td, macro,
   wait-ms = <100>;
   tap-ms = <5>;
   bindings = <&kp T &kp D &kp SE_LBRC &kp SE_RBRC &kp LEFT>;
 )
 
 /* Game */
-ZMK_BEHAVIOR(m_vill,
+ZMK_BEHAVIOR(m_vill, macro,
   wait-ms = <100>;
   tap-ms = <5>;
   bindings = <&kp LC(A) &kp LS(Q)>;
 )
 
 /* Window */
-ZMK_BEHAVIOR(m_back,
+ZMK_BEHAVIOR(m_back, macro,
   wait-ms = <100>;
   tap-ms = <5>;
   bindings = <&macro_press &kp LALT &macro_tap &kp LEFT &macro_release &kp LALT>;
 )
-ZMK_BEHAVIOR(m_forward,
+ZMK_BEHAVIOR(m_forward, macro,
   wait-ms = <100>;
   tap-ms = <5>;
   bindings = <&macro_press &kp LALT &macro_tap &kp RIGHT &macro_release &kp LALT>;
