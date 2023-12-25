@@ -1,30 +1,42 @@
-#define str(s) #s
-#define MACRO(NAME, BINDINGS) \
-  macro_##NAME: macro_##NAME { \
-      compatible = "zmk,behavior-macro"; \
-      label = str(macro_##NAME); \
-      #binding-cells = <0>; \
-      wait-ms = <30>; \
-      tap-ms = <40>; \
-      bindings = <BINDINGS>; \
-  };
-
 /* Dead letters */
-MACRO(circ, &kp SE_CIRC &kp SPACE)
-MACRO(tild, &kp SE_TILD &kp SPACE)
-MACRO(grv, &kp SE_GRV &kp SPACE)
-
-/* Brackets */
-MACRO(parentheses, &kp SE_LPRN &kp SE_RPRN &kp LEFT)
-MACRO(brackets, &kp SE_LBRC &kp SE_RBRC &kp LEFT)
-MACRO(ltgt, &kp SE_LABK &kp SE_RABK &kp LEFT)
+ZMK_BEHAVIOR(m_circ, macro,
+  wait-ms = <100>;
+  tap-ms = <5>;
+  bindings = <&kp SE_CIRC &kp SPACE>;
+)
+ZMK_BEHAVIOR(m_tild,
+  wait-ms = <100>;
+  tap-ms = <5>;
+  bindings = <&kp SE_TILD &kp SPACE>;
+)
+ZMK_BEHAVIOR(m_grv,
+  wait-ms = <100>;
+  tap-ms = <5>;
+  bindings = <&kp SE_GRV &kp SPACE>;
+)
 
 /* Ture */
-MACRO(td, &kp T &kp D &kp SE_LBRC &kp SE_RBRC &kp LEFT)
+ZMK_BEHAVIOR(m_td,
+  wait-ms = <100>;
+  tap-ms = <5>;
+  bindings = <&kp T &kp D &kp SE_LBRC &kp SE_RBRC &kp LEFT>;
+)
 
 /* Game */
-MACRO(vill, &kp LC(A) &kp LS(Q))
+ZMK_BEHAVIOR(m_vill,
+  wait-ms = <100>;
+  tap-ms = <5>;
+  bindings = <&kp LC(A) &kp LS(Q)>;
+)
 
 /* Window */
-MACRO(back, &macro_press &kp LALT &macro_tap &kp LEFT &macro_release &kp LALT )
-MACRO(forward, &macro_press &kp LALT &macro_tap &kp RIGHT &macro_release &kp LALT )
+ZMK_BEHAVIOR(m_back,
+  wait-ms = <100>;
+  tap-ms = <5>;
+  bindings = <&macro_press &kp LALT &macro_tap &kp LEFT &macro_release &kp LALT>;
+)
+ZMK_BEHAVIOR(m_forward,
+  wait-ms = <100>;
+  tap-ms = <5>;
+  bindings = <&macro_press &kp LALT &macro_tap &kp RIGHT &macro_release &kp LALT>;
+)
