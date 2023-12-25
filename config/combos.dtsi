@@ -47,10 +47,10 @@ ZMK_COMBO(rpar,  HRC_RPAR,      RM2 RM3,     QWERTY     NUM, COMBO_TERM_FAST)
 ZMK_COMBO(lt,    &kp SE_LABK,   RM1 RM2,            NAV    , COMBO_TERM_FAST)
 ZMK_COMBO(gt,    &kp SE_RABK,   RM2 RM3,            NAV    , COMBO_TERM_FAST)
 
-ZMK_COMBO(lbkt,  &kp SE_LBKT,   RB1 RB2,     QWERTY     NUM, COMBO_TERM_FAST)
-ZMK_COMBO(rbkt,  &kp SE_RBKT,   RB2 RB3,     QWERTY     NUM, COMBO_TERM_FAST)
-ZMK_COMBO(lbrc,  &kp SE_LBRC,   RB1 RB2,            NAV    , COMBO_TERM_FAST)
-ZMK_COMBO(rbrc,  &kp SE_RBRC,   RB2 RB3,            NAV    , COMBO_TERM_FAST)
+ZMK_COMBO(lbkt,  &kp SE_LBRC,   RB1 RB2,     QWERTY     NUM, COMBO_TERM_FAST)
+ZMK_COMBO(rbkt,  &kp SE_RBRC,   RB2 RB3,     QWERTY     NUM, COMBO_TERM_FAST)
+ZMK_COMBO(lbrc,  &kp SE_LCBR,   RB1 RB2,            NAV    , COMBO_TERM_FAST)
+ZMK_COMBO(rbrc,  &kp SE_RCBR,   RB2 RB3,            NAV    , COMBO_TERM_FAST)
 
 /* Vertical combos - left hand */
 ZMK_COMBO(at,    &kp SE_AT,     LT3 LM3,     QWERTY NAV NUM, COMBO_TERM_SLOW)
