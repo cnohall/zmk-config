@@ -17,7 +17,6 @@
 #include "macros.dtsi"
 #include "combos.dtsi"
 
-ZMK_CONDITIONAL_LAYER(LOWER RAISE, ADJUST)
 
 &caps_word { continue-list = <SE_UNDS SE_MINS BACKSPACE>; };
 
@@ -29,6 +28,8 @@ ZMK_CONDITIONAL_LAYER(LOWER RAISE, ADJUST)
 &sl {  // sticky-layer config
     ignore-modifiers;          // allow chording sticky mods & layers
 };
+
+ZMK_CONDITIONAL_LAYER(LOWER RAISE, ADJUST)
 
 // clang-format off
 ZMK_LAYER(qwerty,
@@ -57,11 +58,11 @@ ZMK_LAYER(game,
 
 ZMK_LAYER(lower,
 //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮  ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-   &kp SE_AT      &kp SE_EXLM   &kp SE_DQUO   &kp SE_HASH   &kp SE_DLR    &kp SE_PERC      &kp SE_AMPR   &kp SE_SLSH   &kp SE_LPRN   &kp SE_RPRN   &kp SE_EQL    &kp SE_BSLS
+    &kp SE_AT     &kp SE_EXLM   &kp SE_DQUO   &kp SE_HASH   &kp SE_DLR    &kp SE_PERC      &kp SE_AMPR   &kp SE_SLSH   &kp SE_LPRN   &kp SE_RPRN   &kp SE_EQL    &kp SE_BSLS
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &kp SE_AT      &kp SE_EXLM   &kp SE_DQUO   &kp SE_HASH   &kp SE_DLR    &kp SE_PERC      &kp SE_AT     &kp SE_QUES   &kp SE_LBRC   &kp SE_RBRC   &kp SE_DLR    &kp SE_ASTR
+    &kp SE_AT     &kp SE_EXLM   &kp SE_DQUO   &kp SE_HASH   &kp SE_DLR    &kp SE_PERC      &kp SE_AT     &kp SE_QUES   &kp SE_LBRC   &kp SE_RBRC   &kp SE_DLR    &kp SE_ASTR
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &kp LSHFT      XXX           &kp SE_PND    &kp SE_EURO   &kp SE_AT     &kp SE_CURR      XXX           &kp SE_ASTR   &kp SE_LCBR   &kp SE_RCBR   XXX           XXX
+    &kp LSHFT     XXX           &kp SE_PND    &kp SE_EURO   &kp SE_AT     &kp SE_CURR      XXX           &kp SE_ASTR   &kp SE_LCBR   &kp SE_RCBR   XXX           XXX
 //╰─────────────┴─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                               XXX           ___           XXX              ___           ___           XXX
 //                                          ╰─────────────┴─────────────┴─────────────╯  ╰─────────────┴─────────────┴─────────────╯
@@ -81,9 +82,9 @@ ZMK_LAYER(raise,
 
 ZMK_LAYER(game_low,
 //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮  ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-  ___           &kp N8        &kp N7        &kp N6        &kp N5        ___              ___           ___           ___           ___           ___           ___
+    ___           &kp N8        &kp N7        &kp N6        &kp N5        ___              ___           ___           ___           ___           ___           ___
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-  ___           &kp N4        &kp N3        &kp N2        &kp N1        ___              ___           ___           ___           ___           ___           ___
+    ___           &kp N4        &kp N3        &kp N2        &kp N1        ___              ___           ___           ___           ___           ___           ___
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     ___           ___           ___           ___           ___           &kp DEL          ___           ___           ___           ___           ___           ___
 //╰─────────────┴─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
