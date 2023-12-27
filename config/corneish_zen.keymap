@@ -17,6 +17,7 @@
 #include "macros.dtsi"
 #include "combos.dtsi"
 
+#define QUICK_TAP_MS 175
 
 &caps_word { continue-list = <SE_UNDS SE_MINS BACKSPACE>; };
 
@@ -27,6 +28,12 @@
 
 &sl {  // sticky-layer config
     ignore-modifiers;          // allow chording sticky mods & layers
+};
+
+&lt {  // layer-tap config
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
 };
 
 ZMK_CONDITIONAL_LAYER(LOWER RAISE, ADJUST)
