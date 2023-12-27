@@ -25,6 +25,12 @@ ZMK_BEHAVIOR(smart_shft, mod_morph,
     mods = <(MOD_LSFT)>;
 )
 
+// tap: sticky shift | double tap: capsword
+ZMK_BEHAVIOR(smart_wm, tap_dance,
+    tapping-term-ms = <QUICK_TAP_MS>;
+    bindings = <&sl WM>, <&to WM>;
+)
+
 &caps_word {
     continue-list = <SE_UNDS SE_MINS BACKSPACE>;
     /delete-property/ ignore-modifiers;
@@ -54,7 +60,7 @@ ZMK_LAYER(qwerty,
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     C_ESC         HRM_A         HRM_S         HRM_D         HRM_F         &kp G            &kp H         HRM_J         HRM_K         HRM_L         HRM_OE        &kp SE_ADIA
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &smart_shft   &kp Z         &kp X         &kp C         &kp V         &kp B            &kp N         &kp M         &kp SE_COMM   &kp SE_DOT    &kp SE_MINS   SLWM
+    &smart_shft   &kp Z         &kp X         &kp C         &kp V         &kp B            &kp N         &kp M         &kp SE_COMM   &kp SE_DOT    &kp SE_MINS   &smart_wm
 //╰─────────────┴─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                               &mo NUM       BS_LOW        TABNUM           SPCNAV        ENT_RS        &sk MEH
 //                                          ╰─────────────┴─────────────┴─────────────╯  ╰─────────────┴─────────────┴─────────────╯
