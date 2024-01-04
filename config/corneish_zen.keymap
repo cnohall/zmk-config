@@ -8,6 +8,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 
 #include "../zmk-nodefree-config/helper.h"
 #include "../zmk-nodefree-config/keypos_def/keypos_42keys.h"
@@ -164,7 +165,7 @@ ZMK_LAYER(function_layer,
 
 ZMK_LAYER(adjust_layer,
 //╭─────────────┬──────────────┬─────────────┬─────────────┬─────────────┬─────────────╮  ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-    XXX           XXX            XXX           XXX           XXX           XXX              XXX           XXX           XXX           XXX           XXX           XXX
+    &out OUT_USB  XXX            XXX           XXX           XXX           XXX              XXX           XXX           XXX           XXX           XXX           &out OUT_BLE
 //├─────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     &bt BT_CLR    &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4     &to GAME      XXX           XXX           XXX           XXX           XXX
 //├─────────────┼──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
