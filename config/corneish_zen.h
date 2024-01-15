@@ -26,6 +26,7 @@
 #define YANK   &kp LC(INS)
 #define PASTE  &kp LS(INS)
 #define KUT    &kp LC(X)
+#define SEL_A  &kp LC(A)
 
 #define C_ESC  &mt LCTRL ESC
 #define BS_LOW &lt LOWER BSPC
