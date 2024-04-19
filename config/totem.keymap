@@ -19,15 +19,9 @@
 #include "../zmk-nodefree-config/helper.h"
 #include "../zmk-nodefree-config/keypos_def/keypos_38keys.h"
 #include "swedish.h"
+#include "totem.h"
 #include "combos-totem.dtsi"
 #include "macros.dtsi"
-
-#define BASE 0
-#define NAV  1
-#define SYM  2
-#define ADJ  3
-#define TVP1 4
-#define TVP2 5
 
 &mt {
   quick-tap-ms = <100>;
