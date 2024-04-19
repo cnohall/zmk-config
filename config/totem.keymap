@@ -19,7 +19,7 @@
 #include "../zmk-nodefree-config/helper.h"
 #include "../zmk-nodefree-config/keypos_def/keypos_38keys.h"
 #include "swedish.h"
-#include "combos-totem.h"
+#include "combos-totem.dtsi"
 #include "macros.dtsi"
 
 #define BASE 0
