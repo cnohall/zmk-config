@@ -5,11 +5,11 @@
 #define SYM  3
 #define ADJ  4
 
-#define BT_CH_0 = &bt BT_SEL 0
-#define BT_CH_1 = &bt BT_SEL 1
-#define BT_CH_2 = &bt BT_SEL 2
-#define BT_CH_3 = &bt BT_SEL 3
-#define BT_CH_4 = &bt BT_SEL 4
+#define BT_CH_0 &bt BT_SEL 0
+#define BT_CH_1 &bt BT_SEL 1
+#define BT_CH_2 &bt BT_SEL 2
+#define BT_CH_3 &bt BT_SEL 3
+#define BT_CH_4 &bt BT_SEL 4
 
 // CUSTOM KEY CODES
 #define XXX &none
