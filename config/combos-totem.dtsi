@@ -16,4 +16,4 @@
 #define COMBO_TERM_SLOW 30
 
 ZMK_COMBO(esc,   &kp ESC,     LT4 LT3,          BASE, COMBO_TERM_SLOW)
-ZMK_COMBO(tvp,   &tog TVP1,   LM3 LM2 LM1,      BASE, COMBO_TERM_SLOW)
+//ZMK_COMBO(tvp,   &tog TVP1,   LM3 LM2 LM1,      BASE, COMBO_TERM_SLOW)
