@@ -37,7 +37,6 @@
 #define TABFNC &lt FUNC TAB
 #define SPC_GL &lt GAME_LOW SPACE
 
-#define SLWM   &sl WM
 #define CLOSE  &kp LA(F4)       // ALT + F4
 #define CAD    &kp LC(LA(DEL))  // CTRL + ALT + DEL
 
