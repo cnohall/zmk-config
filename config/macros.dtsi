@@ -1,5 +1,5 @@
 #define MACRO(NAME, BINDINGS) \
-    ZMK_BEHAVIOR(m_##NAME, macro, \
+    ZMK_MACRO(m_##NAME, \
         wait-ms = <100>; \
         tap-ms = <5>; \
         bindings = <BINDINGS>; \

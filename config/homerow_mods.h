@@ -4,7 +4,7 @@
 #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2                                      // thumb keys
 
 /* left-hand HRMs */
-ZMK_BEHAVIOR(hml, hold_tap,
+ZMK_HOLD_TAP(hml,
     flavor = "balanced";
     tapping-term-ms = <280>;
     quick-tap-ms = <175>;                // repeat on tap-into-hold
@@ -15,7 +15,7 @@ ZMK_BEHAVIOR(hml, hold_tap,
 )
 
 /* right-hand HRMs */
-ZMK_BEHAVIOR(hmr, hold_tap,
+ZMK_HOLD_TAP(hmr,
     flavor = "balanced";
     tapping-term-ms = <280>;
     quick-tap-ms = <175>;                // repeat on tap-into-hold

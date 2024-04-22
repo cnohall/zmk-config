@@ -10,8 +10,8 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#include "../zmk-nodefree-config/helper.h"
-#include "../zmk-nodefree-config/keypos_def/keypos_42keys.h"
+#include "zmk-helpers/helper.h"
+#include "zmk-helpers/key-labels/38.h"
 #include "swedish.h"
 #include "homerow_mods.h"
 #include "corneish_zen.h"
@@ -21,21 +21,14 @@
 #define QUICK_TAP_MS 175
 
 // tap: sticky-shift | shift + tap/ double-tap: caps-word | hold: shift
-ZMK_BEHAVIOR(smart_shft, mod_morph,
+ZMK_MOD_MORPH(smart_shft,
     bindings = <&sk LSHFT>, <&caps_word>;
     mods = <(MOD_LSFT)>;
 )
 
-// tap: sticky shift | double tap: capsword
-ZMK_BEHAVIOR(smart_wm, tap_dance,
-    tapping-term-ms = <QUICK_TAP_MS>;
-    bindings = <&sl WM>, <&to WM>;
-)
-
-&caps_word {
+ZMK_CAPS_WORD(se_cw,
     continue-list = <SE_UNDS SE_MINS BACKSPACE>;
-    /delete-property/ ignore-modifiers;
-};
+)
 
 &sk {  // sticky-key config
     release-after-ms = <900>;  // release after 0.6s
@@ -61,7 +54,7 @@ ZMK_LAYER(qwerty,
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     C_ESC         HRM_A         HRM_S         HRM_D         HRM_F         &kp G            &kp H         HRM_J         HRM_K         HRM_L         HRM_OE        &kp SE_ADIA
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &smart_shft   &kp Z         &kp X         &kp C         &kp V         &kp B            &kp N         &kp M         &kp SE_COMM   &kp SE_DOT    &kp SE_MINS   &smart_wm
+    &smart_shft   &kp Z         &kp X         &kp C         &kp V         &kp B            &kp N         &kp M         &kp SE_COMM   &kp SE_DOT    &kp SE_MINS   &smart_shft
 //╰─────────────┴─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                               &smart_shft   BS_LOW        TABNUM           SPCNAV        ENT_RS        &sk MEH
 //                                          ╰─────────────┴─────────────┴─────────────╯  ╰─────────────┴─────────────┴─────────────╯
