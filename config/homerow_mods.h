@@ -8,10 +8,8 @@ ZMK_HOLD_TAP(hml,
     flavor = "balanced";
     tapping-term-ms = <280>;
     quick-tap-ms = <175>;                // repeat on tap-into-hold
-    require-prior-idle-ms = <150>;
     bindings = <&kp>, <&kp>;
     hold-trigger-key-positions = <KEYS_R THUMBS>;
-    hold-trigger-on-release;             // delay positional check until key-release
 )
 
 /* right-hand HRMs */
@@ -19,10 +17,8 @@ ZMK_HOLD_TAP(hmr,
     flavor = "balanced";
     tapping-term-ms = <280>;
     quick-tap-ms = <175>;                // repeat on tap-into-hold
-    require-prior-idle-ms = <150>;
     bindings = <&kp>, <&kp>;
     hold-trigger-key-positions = <KEYS_L THUMBS>;
-    hold-trigger-on-release;             // delay positional check until key-release
 )
 
 // HOMEROW
