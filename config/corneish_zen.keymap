@@ -28,11 +28,10 @@ ZMK_BEHAVIOR(smart_shft, mod_morph,
 
 &caps_word {
     continue-list = <SE_UNDS SE_MINS BACKSPACE>;
-    /delete-property/ ignore-modifiers;
 };
 
 &sk {  // sticky-key config
-    release-after-ms = <900>;  // release after 0.6s
+    release-after-ms = <900>;  // release after 0.9s
     quick-release;             // no double capitalization when rolling keys
 };
 
