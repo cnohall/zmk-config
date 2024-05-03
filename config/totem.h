@@ -1,12 +1,11 @@
 // LAYERS
 #define BASE   0
-#define GAME   1
-#define LOWER  2
-#define RAISE  3
-#define NAV    4
-#define NUM    5
-#define FUNC   6
-#define ADJUST 7
+#define LOWER  1
+#define RAISE  2
+#define NAV    3
+#define NUM    4
+#define FUNC   5
+#define ADJUST 6
 
 #define BT_CH_0 &bt BT_SEL 0
 #define BT_CH_1 &bt BT_SEL 1
