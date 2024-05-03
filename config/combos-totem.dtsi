@@ -19,7 +19,7 @@
 ZMK_COMBO(esc,   &kp ESC,       LT4 LT3,     BASE, COMBO_TERM_SLOW)
 
 /* Horizontal combos - right hand */
-ZMK_COMBO(coln,  &kp SE_COLN,   RT2 RT3,     BASE, COMBO_TERM_SLOW)
+ZMK_COMBO(coln,  &kp SE_COLN,   RB2 RB3,     BASE, COMBO_TERM_SLOW)
 
 /* Vertical combos - left hand */
 ZMK_COMBO(at,    &kp SE_AT,     LT3 LM3,     BASE, COMBO_TERM_SLOW)
