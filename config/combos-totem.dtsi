@@ -21,9 +21,9 @@
 ZMK_COMBO(esc,   &kp ESC,       LT4 LT3,     BASE, COMBO_TERM_FAST)
 ZMK_COMBO(tab,   HRC_TAB,       LM3 LM2,     BASE, COMBO_TERM_FAST)
 
-ZMK_COMBO(cut,   &kp LC(X),     LB3 LB1,     DEF NAV NUM, COMBO_TERM_FAST)
-ZMK_COMBO(copy,  &kp LC(INS),   LB3 LB2,     DEF NAV NUM, COMBO_TERM_FAST)
-ZMK_COMBO(paste, &kp LS(INS),   LB2 LB1,     DEF NAV NUM, COMBO_TERM_FAST)
+ZMK_COMBO(cut,   &kp LC(X),     LB3 LB1,     BASE NAV NUM, COMBO_TERM_FAST)
+ZMK_COMBO(copy,  &kp LC(INS),   LB3 LB2,     BASE NAV NUM, COMBO_TERM_FAST)
+ZMK_COMBO(paste, &kp LS(INS),   LB2 LB1,     BASE NAV NUM, COMBO_TERM_FAST)
 
 /* Horizontal combos - right hand */
 ZMK_COMBO(coln,  &kp SE_COLN,   RB2 RB3,     BASE, COMBO_TERM_FAST)
