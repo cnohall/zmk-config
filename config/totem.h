@@ -1,9 +1,12 @@
 // LAYERS
-#define BASE 0
-#define GAME 1
-#define NAV  2
-#define SYM  3
-#define ADJ  4
+#define BASE   0
+#define GAME   1
+#define LOWER  2
+#define RAISE  3
+#define NAV    4
+#define NUM    5
+#define FUNC   6
+#define ADJUST 7
 
 #define BT_CH_0 &bt BT_SEL 0
 #define BT_CH_1 &bt BT_SEL 1
@@ -18,5 +21,25 @@
 #define MEH      LC(LS(LALT))
 #define TAB_PREV &kp LC(PG_UP)
 #define TAB_NEXT &kp LC(PG_DN)
+#define CLeft  &kp LC(LEFT)
+#define CRight &kp LC(RIGHT)
+#define NEXT &kp LC(K)
+#define PREV &kp LC(LS(K))
+#define COMNT  &kp LC(SE_QUOT)
+#define DUPLIC &kp LC(LS(D))
+#define DLINE  &kp LC(D)
+#define YANK   &kp LC(INS)
+#define PASTE  &kp LS(INS)
+#define KUT    &kp LC(X)
+#define SEL_A  &kp LC(A)
+
+#define TONAV  &to NAV
+#define TOBASE &to QWERTY
 
 #define C_ESC  &mt LCTRL ESC
+
+#define BS_LOW &lt LOWER BSPC
+#define TABNUM &lt NUM TAB
+#define SPCNAV &lt NAV SPACE
+#define ENT_RS &lt RAISE ENTER
+
