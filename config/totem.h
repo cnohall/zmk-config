@@ -6,7 +6,8 @@
 #define NAV    4
 #define NUM    5
 #define FUNC   6
-#define ADJUST 7
+#define WIN    7
+#define ADJUST 8
 
 #define BT_CH_0 &bt BT_SEL 0
 #define BT_CH_1 &bt BT_SEL 1
@@ -42,4 +43,5 @@
 #define TABNUM &lt NUM TAB
 #define SPCNAV &lt NAV SPACE
 #define ENT_RS &lt RAISE ENTER
+#define WIN_V  &lt WIN V
 
