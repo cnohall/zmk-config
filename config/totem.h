@@ -47,5 +47,5 @@
 #define TABNUM &lt NUM TAB
 #define SPCNAV &lt NAV SPACE
 #define ENT_RS &lt RAISE ENTER
-#define WIN_V  &lt WM V
+#define WM_V   &lt WM V
 
