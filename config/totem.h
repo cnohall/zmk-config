@@ -1,13 +1,14 @@
 // LAYERS
-#define BASE   0
-#define GAME   1
-#define LOWER  2
-#define RAISE  3
-#define NAV    4
-#define NUM    5
-#define FUNC   6
-#define WM     7
-#define ADJUST 8
+#define BASE   0    // QWERTY
+#define CLMDH  1    // Colemak-DH, no home row mods
+#define GAME   2    // Gaming layer, no home row mods
+#define LOWER  3    // Lower layer
+#define RAISE  4    // Raise layer
+#define NAV    5    // Navigation layer
+#define NUM    6    // Numpad layer
+#define FUNC   7    // Function keys
+#define WM     8    // Window management
+#define ADJUST 9    // Adjust layer
 
 #define BT_CH_0 &bt BT_SEL 0
 #define BT_CH_1 &bt BT_SEL 1
@@ -18,19 +19,18 @@
 #define GO_USB  &out OUT_USB
 
 // CUSTOM KEY CODES
-#define XXX &none
-#define ___ &trans
-
-#define MEH      LC(LS(LALT))
-#define TAB_PREV &kp LC(PG_UP)
-#define TAB_NEXT &kp LC(PG_DN)
-#define CLeft    &kp LC(LEFT)
-#define CRight   &kp LC(RIGHT)
-#define NEXT     &kp LC(K)
-#define PREV     &kp LC(LS(K))
-#define COMNT    &kp LC(SE_QUOT)
-#define DUPLIC   &kp LC(LS(D))
-#define DLINE    &kp LC(D)
+#define XXX      &none
+#define ___      &trans
+#define MEH      LC(LS(LALT))     // Left Alt + Ctrl
+#define TAB_PREV &kp LC(PG_UP)    // Previous tab
+#define TAB_NEXT &kp LC(PG_DN)    // Next tab
+#define CLeft    &kp LC(LEFT)     // CTRL + Left arrow
+#define CRight   &kp LC(RIGHT)    // CTRL + Right arrow
+#define NEXT     &kp LC(K)        // Next occurance
+#define PREV     &kp LC(LS(K))    // Previous occurance
+#define COMNT    &kp LC(SE_QUOT)  // Comment line
+#define DUPLIC   &kp LC(LS(D))    // Duplicate line
+#define DLINE    &kp LC(D)        // Delete line
 #define YANK     &kp LC(INS)
 #define PASTE    &kp LS(INS)
 #define KUT      &kp LC(X)
