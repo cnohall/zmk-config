@@ -24,8 +24,6 @@
 #include "combos-totem.dtsi"
 #include "macros.dtsi"
 
-#define QUICK_TAP_MS 175
-
 // tap: sticky-shift | shift + tap/ double-tap: caps-word | hold: shift
 ZMK_BEHAVIOR(smart_shft, mod_morph,
     bindings = <&sk LSHFT>, <&caps_word>;

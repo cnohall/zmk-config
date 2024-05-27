@@ -3,11 +3,13 @@
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4 RB5  // right-hand keys
 #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2                                          // thumb keys
 
+#define QUICK_TAP_MS 175
+
 /* left-hand HRMs */
 ZMK_BEHAVIOR(hml, hold_tap,
     flavor = "balanced";
     tapping-term-ms = <280>;
-    quick-tap-ms = <175>;                // repeat on tap-into-hold
+    quick-tap-ms = <QUICK_TAP_MS>;                // repeat on tap-into-hold
     require-prior-idle-ms = <150>;
     bindings = <&kp>, <&kp>;
     hold-trigger-key-positions = <KEYS_R THUMBS>;
@@ -18,18 +20,33 @@ ZMK_BEHAVIOR(hml, hold_tap,
 ZMK_BEHAVIOR(hmr, hold_tap,
     flavor = "balanced";
     tapping-term-ms = <280>;
-    quick-tap-ms = <175>;                // repeat on tap-into-hold
+    quick-tap-ms = <QUICK_TAP_MS>;                // repeat on tap-into-hold
     require-prior-idle-ms = <150>;
     bindings = <&kp>, <&kp>;
     hold-trigger-key-positions = <KEYS_L THUMBS>;
     hold-trigger-on-release;             // delay positional check until key-release
 )
 
+/* Left homerow chord */
+ZMK_BEHAVIOR(hml_repeat, hold_tap,
+    flavor = "balanced";
+    tapping-term-ms = <280>;
+    quick-tap-ms = <QUICK_TAP_MS>;                // repeat on tap-into-hold
+    require-prior-idle-ms = <150>;
+    bindings = <&kp>, <&key_repeat>;
+    hold-trigger-key-positions = <KEYS_R THUMBS>;
+    hold-trigger-on-release;             // delay positional check until key-release
+)
+
 // HOMEROW
+
+// left-hand homerow mods
 #define HRM_A  &hml LGUI A
 #define HRM_S  &hml LALT S
 #define HRM_D  &hml LCTRL D
 #define HRM_F  &hml LSHFT F
+
+// right-hand homerow mods
 #define HRM_J  &hmr RSHFT J
 #define HRM_K  &hmr LCTRL K
 #define HRM_L  &hmr LALT L
