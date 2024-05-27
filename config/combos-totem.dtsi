@@ -14,7 +14,7 @@
 #define COMBO_IDLE_FAST 150
 #define COMBO_IDLE_SLOW 50
 
-#define HRC_TAB    &hml         LS(LALT) TAB
+#define HRC_TAB  &hml           LS(LALT) TAB
 
 /* Horizontal combos - left hand */
 ZMK_COMBO(esc,   &kp ESC,       LT3 LT2,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
