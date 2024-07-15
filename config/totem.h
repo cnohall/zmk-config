@@ -28,9 +28,9 @@
 #define CRight   &kp LC(RIGHT)    // CTRL + Right arrow
 #define NEXT     &kp LC(K)        // Next occurance
 #define PREV     &kp LC(LS(K))    // Previous occurance
-#define COMNT    &kp LC(SE_QUOT)  // Comment line
-#define DUPLIC   &kp LC(LS(D))    // Duplicate line
-#define DLINE    &kp LC(D)        // Delete line
+#define COMNT    &kp LG(SE_QUOT)  // Comment line
+#define DUPLIC   &kp LG(LS(D))    // Duplicate line
+#define DLINE    &kp LG(D)        // Delete line
 #define YANK     &kp LC(INS)
 #define PASTE    &kp LS(INS)
 #define KUT      &kp LC(X)
