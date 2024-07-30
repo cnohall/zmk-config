@@ -20,8 +20,8 @@
 #include "../zmk-nodefree-config/keypos_def/keypos_38keys.h"
 #include "swedish.h"
 #include "totem.h"
-#include "homerow_mods-totem.h"
-#include "combos-totem.dtsi"
+#include "homerow_mods.h"
+#include "combos.dtsi"
 #include "macros.dtsi"
 
 // tap: sticky-shift | shift + tap/ double-tap: caps-word | hold: shift
@@ -139,9 +139,9 @@ ZMK_LAYER(raise,
 
 ZMK_LAYER(nav,
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-                XXX         &kp LGUI    &kp LALT    XXX         &kp PG_UP       YANK        TAB_PREV    &m_forward  TAB_NEXT    PASTE
+                XXX         &kp LGUI    &kp LALT    XXX         &kp PG_UP       YANK        TAB_PREV    &kp UP      TAB_NEXT    PASTE
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-                &kp HOME    &kp END     &kp LCTRL   &kp LSHFT   &kp PG_DN       &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp DEL
+                &kp HOME    &kp END     &kp LCTRL   &kp LSHFT   &kp PG_DN       XXX         &kp LEFT    &kp DOWN    &kp RIGHT   &kp DEL
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
     XXX         XXX         DLINE       COMNT       DUPLIC      XXX             CLeft       YANK        PASTE       CRight      XXX         &kp PSCRN
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
