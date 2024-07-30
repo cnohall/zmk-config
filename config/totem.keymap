@@ -41,6 +41,7 @@ ZMK_BEHAVIOR(smart_shft, mod_morph,
 };
 
 &sl {  // sticky-layer config
+release-after-ms = <2000>;     // release after 2s
     ignore-modifiers;          // allow chording sticky mods & layers
 };
 
@@ -178,12 +179,12 @@ ZMK_LAYER(func,
 
 ZMK_LAYER(adj,
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-                &sys_reset  &bootloader &to BASE    &to CLMDH   &to GAME        XXX         &kp F7      &kp F8      &kp F9      &kp F12
+                &sys_reset  &to CLMDH   &to GAME    &to BASE    XXX             XXX         &kp F7      &kp F8      &kp F9      &kp F12
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
                 BT_CH_3     BT_CH_2     BT_CH_1     BT_CH_0     XXX             XXX         &kp F4      &kp F5      &kp F6      &kp F11
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
     &bt BT_CLR  GO_USB      GO_BLE      XXX         BT_CH_4     XXX             XXX         &kp F1      &kp F2      &kp F3      &kp F10     XXX
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-                                        XXX         XXX         XXX             XXX         XXX         XXX
+                                        XXX         XXX         &bootloader     &bootloader XXX         XXX
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 )
