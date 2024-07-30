@@ -20,8 +20,8 @@
 #include "../zmk-nodefree-config/keypos_def/keypos_38keys.h"
 #include "swedish.h"
 #include "totem.h"
-#include "homerow_mods-totem.h"
-#include "combos-totem.dtsi"
+#include "homerow_mods.h"
+#include "combos.dtsi"
 #include "macros.dtsi"
 
 // tap: sticky-shift | shift + tap/ double-tap: caps-word | hold: shift
