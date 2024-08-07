@@ -1,18 +1,13 @@
 // LAYERS
-#define BASE         0                  // QWERTY
-#define BASE_MAC     1                  // QWERTY for MacOS
-#define CLMDH        2                  // Colemak-DH, no home row mods
-#define GAME         3                  // Gaming layer, no home row mods
-#define LOWER        4                  // Lower layer
-#define LOWER_MAC    5                  // Lower layer
-#define RAISE        6                  // Raise layer
-#define RAISE_MAC    7                  // Raise layer
-#define NAV          8                  // Navigation layer
-#define NAV_MAC      9                  // Navigation layer
-#define NUM         10                  // Numpad layer
-#define NUM_MAC     11                  // Numpad layer
-#define FUNC        12                  // Function keys
-#define ADJUST      13                  // Adjust layer
+#define BASE        0                   // QWERTY
+#define CLMDH       1                   // Colemak-DH, no home row mods
+#define GAME        2                   // Gaming layer, no home row mods
+#define LOWER       3                   // Lower layer
+#define RAISE       4                   // Raise layer
+#define NAV         5                   // Navigation layer
+#define NUM         6                   // Numpad layer
+#define FUNC        7                   // Function keys
+#define ADJUST      8                   // Adjust layer
 
 #define BT_CH_0     &bt BT_SEL 0
 #define BT_CH_1     &bt BT_SEL 1
